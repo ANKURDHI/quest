@@ -540,11 +540,13 @@ footer{
     transform: scale(1);
 }
 
+/* box for questions */
 .borbox{
     border:1px solid black;
     padding: 25px;
     margin-top: 10px;
 }
+/* space for left and right for the content inside question box */
 .space{
     margin:50px;
 }

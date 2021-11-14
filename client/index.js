@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function (){
 });
 
 
-
+//questions
 function loadHTMLTable(data){
     const table = document.getElementById('questions');
 //    console.log(data);
@@ -34,8 +34,9 @@ function loadHTMLTable(data){
     });
     table.innerHTML =tableHtml;
 }
+//blog and posts
 function loadHTMLTable1(data){
-//blog
+
     const trend = document.getElementById('trend');
     //    console.log(data);
         if(data.length==0){
