@@ -13,6 +13,41 @@ document.addEventListener('DOMContentLoaded',function (){
 });
 
 
+
+
+
+// insert
+
+const addBtn = document.querySelector('#add-name-btn');
+
+addBtn.onclick = function () {
+    const nameInput = document.querySelector('#name-input');
+    const question = nameInput.value;
+    nameInput.value = "";
+
+    fetch('http://localhost:5000/insert', {
+        headers: {
+            'Content-type': 'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify({ question : question})
+    })
+    .then(response => response.json())
+    // .then(data => insertRowIntoTable(data['data']));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //questions
 function loadHTMLTable(data){
     const table = document.getElementById('questions');

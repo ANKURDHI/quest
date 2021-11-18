@@ -59,7 +59,29 @@ class DbService{
         }
     }
 
-
+// insert
+async insertNewName(question) {
+    try {
+       let username="Joe";
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = "INSERT INTO ques(username, question) VALUES (?,?);";
+            
+            connection.query(query, [username, question] , (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            // id : insertId,
+           username : username,
+            question : question
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 }
 

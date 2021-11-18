@@ -57,7 +57,17 @@ app.get('/getAll1', (request, response) => {
 })
 
 
+// create
+app.post('/insert', (request, response) => {
+    const { question } = request.body;
+    const db = dbSerivce.getDbServiceInstance();
+    
+    const result = db.insertNewName(question);
 
+    result
+    .then(data => response.json({ data: data}))
+    .catch(err => console.log(err));
+});
 
 
 
