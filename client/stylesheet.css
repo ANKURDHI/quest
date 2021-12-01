@@ -103,10 +103,10 @@ nav{
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid red;
-    position: -webkit-sticky; 
+    /* position: -webkit-sticky; 
     position: sticky;
     top: 0;
-    z-index: 1001;
+    z-index: 1001; */
 }
 
 
@@ -305,9 +305,9 @@ footer{
 
 
 
-/* .postarea{
-    /* border: 3px solid brown; 
-} */
+.postarea{
+    border: 3px solid brown;
+}
 
 .postarea{
     overflow-x: hidden;
@@ -540,17 +540,97 @@ footer{
     transform: scale(1);
 }
 
-/* box for questions */
-.borbox{
-    border:1px solid black;
-    padding: 25px;
-    margin-top: 10px;
-}
-/* space for left and right for the content inside question box */
-.space{
-    margin:50px;
-}
-.left{
-    display: flex;
-    justify-content: flex-end;
-}
+
+
+/* model css stat from here  */
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+          
+          /* Modal Content */
+          .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+          }
+          
+          /* The Close Button */
+          .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
+          
+          
+           /* ask box styling start from  here  */
+          
+          
+          .subask0{
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding:.3rem;
+              margin-top: 1rem;
+              margin-left: 2rem;
+              margin-right: 10rem;
+          }
+          .subask0{
+              border: 2px solid violet;
+          }
+          .subask0 .askicon{
+              font-size: 1.5rem;
+              padding-right: 1.5rem;
+          }
+          /* .subask0 .lc{
+              margin-left: 38rem;
+          } */
+          
+          .askpost1{
+              margin-left: 2rem;
+              margin-top: 0.4rem;
+              margin-right: 10rem;
+              border: 2px solid violet;
+              padding: 5rem;
+              background: lightyellow;
+          }
+          
+          .askpost1 .asklink a{
+              text-decoration: none;
+              color: black;
+              padding: 10px 18px;
+              margin-right: 10px;
+              position: relative;
+              top: 12%;
+              right: -58%;
+              border: 1px solid black;
+              background: lightskyblue;
+              font-weight: bold;
+              font-size: 1rem;
+          }
+          .askpost1 .asklink a:hover{
+              background: rgba(135, 206, 250, 0.705);
+          }

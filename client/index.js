@@ -26,10 +26,32 @@ function loadHTMLTable(data){
     data.forEach(function({ username, question}){
         // console.log(question);
         tableHtml +=
-        `<div class="space"> <i class="fas fa-user "> ${username}</i> 
-        <div class="questionbox borbox"> ${question}</div>
-        <a href="" class="left">See All Answers >>> </a> 
-        </div>`
+        `
+
+        <div class="post1">
+
+            <div class="subpost0">
+                <div class="uicon">
+                    <i class="fas fa-portrait"></i> 
+                </div>
+                <div class="para">
+                    <p>${username}</p>
+                </div>
+                <div class="lc">
+                <i class="far fa-thumbs-up">245</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">167</i>
+                </div>
+            </div>
+
+            <div class="subpost1">
+            ${question}
+            </div>
+
+        </div>
+
+        <div class="seeall">
+            <a href="#">SEE ALL ANSWERS &nbsp;>></a>
+        </div>
+`
 
     });
     table.innerHTML =tableHtml;
@@ -78,4 +100,34 @@ function loadHTMLTable1(data){
         });
         trend.innerHTML =trendHtml;
 
+}
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+    
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
