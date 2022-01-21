@@ -21,7 +21,7 @@ app.get('/getAll', (request, response) => {
     const db = dbSerivce.getDbServiceInstance();
 
     const result = db.getAllData();
-   
+
 
 
     result
@@ -30,8 +30,8 @@ app.get('/getAll', (request, response) => {
 
         .catch(err => console.log(err));
 
-     
-    
+
+
 
 
 })
@@ -41,7 +41,7 @@ app.get('/getAll1', (request, response) => {
     const db = dbSerivce.getDbServiceInstance();
 
     const result = db.getAllData2();
-   
+
 
 
     result
@@ -50,23 +50,51 @@ app.get('/getAll1', (request, response) => {
 
         .catch(err => console.log(err));
 
-     
-    
+
+
 
 
 })
 
 
-// create
-app.post('/insert', (request, response) => {
-    const { question } = request.body;
+// authentication
+app.get('/getAll3', (request, response) => {
     const db = dbSerivce.getDbServiceInstance();
-    
-    const result = db.insertNewName(question);
+
+    const result = db.getAllData3();
+
+
 
     result
-    .then(data => response.json({ data: data}))
-    .catch(err => console.log(err));
+
+        .then(data => response.json({ data: data }))
+
+        .catch(err => console.log(err));
+
+
+
+
+
+})
+
+
+
+
+
+
+// create
+app.post('/insert', (request, response) => {
+    const { name } = request.body;
+    const { question } = request.body;
+
+    const db = dbSerivce.getDbServiceInstance();
+
+    const result = db.insertNewName(name, question);
+    // const result = db.insertNewName(question);
+
+    result
+        .then(data => response.json({ data: data }))
+        .catch(err => console.log(err));
 });
 
 

@@ -583,6 +583,7 @@ footer{
             text-decoration: none;
             cursor: pointer;
           }
+
           
           
           
@@ -634,3 +635,103 @@ footer{
           .askpost1 .asklink a:hover{
               background: rgba(135, 206, 250, 0.705);
           }
+
+/* close for post */
+ .close-2 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close-2:hover,
+          .close-2:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          /* like dislike */
+          .voting{
+            position: relative;
+            border: 3px solid #303030;
+            border-radius: 4px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+          }
+     
+          .input-like-dislike{
+            width: 50px;
+            border: none;
+            background: none;
+            color: #919191;
+            font-size: 20px;
+            margin: 0 10px;
+            pointer-events: none;
+          }
+          .like-dislike{
+            color: grey;
+            background: none;
+            border: none;
+            font-size: 20px;
+            padding: 0 15px;
+            margin: 10px 0;
+            margin-left: 20px;
+            cursor: pointer;
+          }
+     
+          .like-dislike:active{
+            color: #004eff;
+            transform: scale(1.2);
+          }
+     
+
+
+
+
+          /* blog */
+
+        
+        #subblog1{
+            text-align: center;
+            font-size: 1.6rem;
+            background: black;
+            color: red;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            margin-left:35.5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 42px;
+        }
+        #subblog1:hover{
+            background: rgba(0, 0, 0, 0.5);
+            /* background: rgb(129, 223, 223); */
+            /* color: white; */
+            color: #fff;
+        }
+        @media only screen and (max-width:1000px) {
+   #subblog1{
+            margin-left:2rem;
+            margin-top: 1rem;
+  }
+}
+@media only screen and (max-width:700px) {
+   #subblog1{
+            font-size: 1rem;
+            padding: 7px 14px;
+  }
+}
+
+/* 
+post */
+#post-image{
+    border: 2px solid pink;
+    margin: 2rem;
+    
+}
+
+

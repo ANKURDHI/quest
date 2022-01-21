@@ -28,7 +28,7 @@ class DbService{
     async getAllData(){
         try{
             const response = await new Promise((resolve,reject)=>{
-                const query = "SELECT * FROM ques;";
+                const query = "SELECT * FROM ques where id <= 5;";
                 connection.query(query,(err,results)=>{
                     if(err) reject(new Error(err.message));
                     resolve(results);
@@ -45,7 +45,7 @@ class DbService{
     async getAllData2(){
         try{
             const response = await new Promise((resolve,reject)=>{
-                const query = "SELECT * FROM blog;";
+                const query = "SELECT * FROM blog WHERE id <= 5;";
                 connection.query(query,(err,results)=>{
                     if(err) reject(new Error(err.message));
                     resolve(results);
@@ -59,10 +59,32 @@ class DbService{
         }
     }
 
+
+
+// authentication data
+async getAllData3(){
+    try{
+        const response = await new Promise((resolve,reject)=>{
+            const query = "SELECT * FROM users;";
+            connection.query(query,(err,results)=>{
+                if(err) reject(new Error(err.message));
+                resolve(results);
+            })
+        });
+        // console.log(response);
+    return response ;
+
+    }catch(error){
+        console.log(error);
+    }
+}
+
+
+
 // insert
-async insertNewName(question) {
+async insertNewName(username , question) {
     try {
-       let username="Joe";
+       
        
         const insertId = await new Promise((resolve, reject) => {
             const query = "INSERT INTO ques(username, question) VALUES (?,?);";

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGS</title>
+    <script src="https://cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rr-vsZz-zcI8MRJkaEBu3FjE_TfkY2fJTw&usqp=CAU">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(241, 227, 209);
+        }
+        #subblog1{
+            text-align: center;
+            font-size: 1.6rem;
+            background: black;
+            color: red;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            margin-left:35.5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 42px;
+        }
+        #subblog1:hover{
+            background: rgba(0, 0, 0, 0.5);
+            /* background: rgb(129, 223, 223); */
+            /* color: white; */
+            color: #fff;
+        }
+        @media only screen and (max-width:1000px) {
+   #subblog1{
+            margin-left:2rem;
+            margin-top: 1rem;
+  }
+}
+@media only screen and (max-width:700px) {
+   #subblog1{
+            font-size: 1rem;
+            padding: 7px 14px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+    <textarea name="editor1">
+       <b>Write your opinions/thoughts/ideas</b>
+    </textarea>
+    <input type="submit" name="submitblog" id="subblog1">
+    </form>
+
+    <script>
+            CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>

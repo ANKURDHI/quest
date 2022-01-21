@@ -15,10 +15,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    /* display: flex; */
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-size: 1.6rem;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .container {

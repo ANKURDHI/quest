@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- aos lib  and css  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+    <title>LOGOUT</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url('https://media.istockphoto.com/photos/round-podium-or-pedestal-with-blue-background-picture-id1226478932?b=1&k=20&m=1226478932&s=170667a&w=0&h=hXsvxQilNanpKx7QC_tIsFUOKPl8fdIDfJ_QSKXesGE=');
+            background-size: cover;
+            
+        }
+        #exampleModalLabel{
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+            background: aquamarine;
+            font-size: 1.6rem;
+            padding: 15px;
+        }
+        .btn{
+            font-weight: bold;
+            position: absolute;
+            
+            
+        }
+        .btn-warning{
+            position: relative;
+            left: -43%;
+            padding: 10px 20px;
+            
+        }
+        .addac{
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            margin-bottom: -40px;
+            margin-top: -35px;
+        }
+        .addac > h3{
+            padding: 14px;
+            margin-top: 18px;
+        }
+        .fa-user-plus,.fa-sign-out-alt,.fa-sticky-note{
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Click Me to Show User-Details
+  </button>
+  
+  <!-- Modal -->
+  <!-- id is examplemodal when you click on logout button this will open -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><B>USERBOX</B></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" id="crossicon">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+            <!-- UserPhoto coming from database -->
+            <a href="#"><img src="userphoto" alt="userphoto" width="40px" height="auto"></a>
+
+            <!-- username will come here -->
+            <h3 id="uname" name="uname">HimanshuSR</h3>
+            <h3 style="margin-bottom: 17px; font-size: 24px;">Groups I am part of: "Value from db"</h3>
+
+            <div class="addac">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            <h3 id="addanother"><a href="Loginpage">Add Another Account</a></h3>
+            </div>
+            <div class="addac">
+                <i class="far fa-sticky-note"></i>
+                <h3 id="privacytnc"><a href="#privacypage">Privacy and T&C</a></h3>
+             </div>
+             <div class="addac">
+             <i class="fas fa-sign-out-alt"></i>
+            <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"><a href="#logout">SignOut</a></button></h3>
+        </div>
+        </div>
+
+
+
+        <div class="modal-footer">
+          <!-- class="btn btn-secondary" -->
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
+<script>
+    function logfunc() {
+      var logf1 = confirm("Do You Want to Signout!!!");
+      if (logf1 == true) {
+          localStorage.clear();
+          window.location.replace("login.html");
+        // go on indexpage 
+      } else {
+        // reside on same page
+      }
+    }
+    </script>
+</html>
