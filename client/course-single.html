@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quest &mdash;</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"> -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><div class="col-md-2"> <img class="d-none d-md-flex" src="https://img.icons8.com/clouds/200/000000/quora.png" id="brandico" > </div></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#society-section" class="nav-link">Society</a></li>
+                <li><a href="#j-sec" class="nav-link">Join</a></li>
+                <li><a href="index.html#help-section" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <li class="cta"><a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal9o"><i class="fa fa-user-circle" id="accicio"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+<!-- Modal for account -->
+  <!-- id is examplemodal when you click on logout button this will open -->
+  <div class="modal fade text-black" id="exampleModal9o" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9o" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel9o"><B>USERBOX</B></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" id="crossicon">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+            <!-- UserPhoto coming from database -->
+            <a href="#"><img src="userphoto" alt="userphoto" width="40px" height="auto"></a>
+
+            <!-- username will come here -->
+            <h3 id="uname" name="uname">HimanshuSR</h3>
+            <h3 style="margin-bottom: 17px; font-size: 24px;">Groups I am part of: "Value from db"</h3>
+
+            <div class="addac">
+            <h3 id="addanother"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<a href="login.html">Add Another Account</a></h3>
+            </div>
+            <div class="addac">
+                
+                <h3 id="privacytnc"><i class="fa fa-sticky-note-o"></i>&nbsp;<a href="#privacypage"> Privacy and T&C</a></h3>
+             </div>
+             <div class="addac">
+             
+            <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"> <i class="fa fa-sign-out"></i>&nbsp;<a href="#logout">SignOut</a></button></h3>
+        </div>
+        </div>
+
+
+
+        <div class="modal-footer">
+          <!-- class="btn btn-secondary" -->
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- account modal end -->
+    <div class="intro-section single-cover" id="home">
+      
+      <div class="slide-1 " style="background-color:whitesmoke;" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-6">
+                  <h1 data-aos="fade-up" data-aos-delay="0">Info Tech Club</h1>
+                  <p data-aos="fade-up" data-aos-delay="100"> &bullet; 2,193 students &bullet; <a href="#" class="text-black">6 comments</a></p>
+                </div>
+
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5">
+
+            <div class="mb-5">
+              <h3 class="text-black">Club Description</h3>
+              <p class="mb-4">
+                <strong class="text-black mr-3">Operating Hours: </strong>  9:30 - 11:00
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eum iure voluptatum provident natus, deleniti alias corporis dolorem architecto eligendi consequatur, veniam ratione qui adipisci, doloremque aspernatur? Debitis, quia, praesentium.</p>
+              <p>Molestias sit temporibus ullam voluptatem quibusdam. Accusamus labore perspiciatis similique veritatis ipsum iure quas. Nulla perspiciatis unde eveniet nihil, nesciunt repellat maxime ab libero minima voluptas dolore repudiandae adipisci. Cumque!</p>
+              <p>Enim harum voluptatem, itaque in illum quas temporibus tempore sit tempora quam atque eveniet, non aspernatur dignissimos aliquid praesentium exercitationem delectus, maxime velit saepe! Qui asperiores iure reprehenderit ad voluptas!</p>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                  <img src="images/img_2.jpg" alt="Image" class="img-fluid rounded" id="j-sec">
+                </div>
+              </div>
+              <p>Ipsam fuga fugiat vero repudiandae, tenetur a ullam, expedita perspiciatis dolores rem quibusdam numquam dicta sint unde repellat magni recusandae. Id, quibusdam, voluptatum. Amet mollitia ratione, illum animi quia ex?</p>
+              <p>Sint aut repudiandae, in amet nemo. Nobis labore id iure molestias reprehenderit quisquam illo quod cum dolorum aspernatur ut sequi, facere beatae, porro cupiditate magnam laborum laudantium laboriosam ab autem!</p>
+
+              <p class="mt-5 mb-5" ><a href="#" class="btn btn-primary" >Join Club</a></p>
+            </div>
+
+            <div class="pt-5">
+              <h3 class="mb-5">6 Comments</h3>
+              <ul class="comment-list">
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>Jean Doe</h3>
+                    <div class="meta">January 9, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>Jean Doe</h3>
+                    <div class="meta">January 9, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+
+                  <ul class="children">
+                    <li class="comment">
+                      <div class="vcard bio">
+                        <img src="images/person_1.jpg" alt="Image placeholder">
+                      </div>
+                      <div class="comment-body">
+                        <h3>Jean Doe</h3>
+                        <div class="meta">January 9, 2018 at 2:21pm</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                        <p><a href="#" class="reply">Reply</a></p>
+                      </div>
+
+
+                      <ul class="children">
+                        <li class="comment">
+                          <div class="vcard bio">
+                            <img src="images/person_1.jpg" alt="Image placeholder">
+                          </div>
+                          <div class="comment-body">
+                            <h3>Jean Doe</h3>
+                            <div class="meta">January 9, 2018 at 2:21pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                            <p><a href="#" class="reply">Reply</a></p>
+                          </div>
+
+                            <ul class="children">
+                              <li class="comment">
+                                <div class="vcard bio">
+                                  <img src="images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                  <h3>Jean Doe</h3>
+                                  <div class="meta">January 9, 2018 at 2:21pm</div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                  <p><a href="#" class="reply">Reply</a></p>
+                                </div>
+                              </li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>Jean Doe</h3>
+                    <div class="meta">January 9, 2018 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+              </ul>
+              <!-- END comment-list -->
+              
+              <div class="comment-form-wrap pt-5" id="c-sec"> 
+                <h3 class="mb-5">Leave a comment</h3>
+                <form action="#" class="p-5 bg-light">
+                  <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" class="form-control" id="website">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Post Comment" class="btn btn-primary">
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-lg-4 pl-lg-5">
+
+            <div class="mb-5 text-center border rounded course-instructor">
+              <h3 class="mb-5 text-black text-uppercase h6 border-bottom pb-3">Club Head</h3>
+              <div class="mb-4 text-center">
+                <img src="images/person_2.jpg" alt="Image" class="w-25 rounded-circle mb-4">  
+                <h3 class="h5 text-black mb-4">Christine Downeyy</h3>
+                <p>Lorem ipsum dolor sit amet sectetur adipisicing elit. Ipsa porro expedita libero pariatur vero eos.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- scieties section started -->
+   <div class="site-section courses-title" id="society-section">
+    <div class="container">
+      <div class="row mb-0 justify-content-center">
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+          <h2 class="section-title" id="socifont">-- More Society Clubs --</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+      <div class="row">
+
+        <div class="owl-carousel col-12 nonloop-block-14">
+<!-- society card start.................. -->
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$20</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">InfoTech Club</a></h3>
+              <p>A club for techies who are devoted to the tech world.</p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+<!-- club2 -->
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/uuj.jpg" alt="Image" class="img-fluid"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$99</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">Art Club</a></h3>
+              <p>A club for the creative ones who love to play with colours.</p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+<!-- club3 -->
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/appl.jpg" alt="Image" class="img-fluid mb-3"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$99</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">Music Club</a></h3>
+              <p>A club for the music devotees who love to sing dance and play. </p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+
+<!-- club4 -->
+
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$20</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">Literary Club</a></h3>
+              <p>A club for the writers who can write anytime anywhere.</p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+<!-- club5 -->
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/sp1.jpg" alt="Image" class="img-fluid mb-3"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$99</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">Sports Club</a></h3>
+              <p>A club for the gamers who love to play games online or offline.</p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+<!-- club6 -->
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+              <a href="course-single.html"><img src="images/ec2.jpg" alt="Image" class="img-fluid mb-3"></a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+              <!-- <span class="course-price">$99</span> -->
+              <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+              <h3><a href="#">Eco Club</a></h3>
+              <p>A club for environment lovers who always care about nature.</p>
+            </div>
+            <div class="d-flex border-top stats">
+              <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+              <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+            </div>
+          </div>
+
+        </div>
+
+       
+<!-- previous and next button of carousel -->
+      </div>
+      <div class="row justify-content-center mt-0">
+        <div class="col-7 text-center">
+          <button class="customPrevBtn btn btn-primary m-1">Prev</button>
+          <button class="customNextBtn btn btn-primary m-1" >Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- society section ended -->
+     
+    <!--foooter  -->
+   
+              <div class="container   text-center" id="forrtxt">
+                
+                  <p >
+               
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This WebPage is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://bpibs.in/" target="_blank" >Bpibs students</a>
+              
+           </p>
+                  </div>
+                <!--footer ended  -->
+
+  
+    
+  <!-- </div> .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
