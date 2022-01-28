@@ -1498,5 +1498,13 @@ margin-bottom: -900px;
 }
 /* post comment form styling end */
 
+/* like dislike button  */
+.like-dislike{
+  color:grey;
+  border: none;
+  
+}
 
-
+.erans{
+  color: #243233;
+}

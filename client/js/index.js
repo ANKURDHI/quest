@@ -10,32 +10,79 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => loadHTMLTable1(data['data']));
     // console.log(data2);
 
+    fetch('http://localhost:5000/getAll3')
+        .then(response => response.json())
+        .then(data => profilePhoto(data['data']));
+
+  
 
 
-    // user set
-    const userData = document.querySelector('.subask0');
+    //  user set
+    let userData = document.querySelector('#uname');
     const name1 = localStorage.getItem('user');
-    userData.innerHTML = ` <div class="askicon">
-                   <i class="fas fa-portrait"></i> 
-                     </div>
-                     <div class="askpara">
-               <p id="user">${name1}</p>
-                         </div>`;
+    userData.innerHTML = ` ${name1}`;
 
 
 });
 
+// Profile Photo set
+function profilePhoto(data) {
+  let userBox = document.getElementById('userBox');
+  const name1 = localStorage.getItem('user');
+  data.forEach(function ({ username,image}) {
+    if(name1==username){
+      userBox.innerHTML=` <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel9o"><B>USERBOX</B></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" id="crossicon">&times;</span>
+      </button>
+    </div>
 
+
+    <div  class="modal-body">
+      <!-- UserPhoto coming from database -->
+      <a href="#"><img src="${image}" alt="userphoto" width="40px" height="auto"></a>
+
+      <!-- username will come here -->
+      <h3 id="uname" name="uname">${username}</h3>
+      
+      <div class="addac">
+        <h3 id="addanother"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<a href="login.html">Add
+            Another Account</a></h3>
+      </div>
+      <div class="addac">
+
+        <h3 id="privacytnc"><i class="fa fa-sticky-note-o"></i>&nbsp;<a href="#privacypage"> Privacy and T&C</a>
+        </h3>
+      </div>
+      <div class="addac">
+
+        <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"> <i
+              class="fa fa-sign-out"></i>&nbsp;<a href="#logout">SignOut</a></button></h3>
+      </div>
+    </div>
+
+
+
+    <div class="modal-footer">
+      <!-- class="btn btn-secondary" -->
+      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+    </div>
+  </div>`
+    }
+
+  })
+}
 
 
 
 // insert
 
-const addBtn = document.querySelector('#add-name-btn');
-
+const addBtn = document.querySelector('#addNameBtn');
+// console.log(addBtn);
 addBtn.onclick = function () {
     const name1 = localStorage.getItem('user');
-    const nameInput = document.querySelector('#name-input');
+    const nameInput = document.querySelector('#textAreaExample');
     const question = nameInput.value;
     nameInput.value = "";
 
@@ -60,9 +107,6 @@ addBtn.onclick = function () {
 
 
 
-
-
-
 //questions
 function loadHTMLTable(data) {
     const table = document.getElementById('questions');
@@ -73,51 +117,80 @@ function loadHTMLTable(data) {
 
     }
     let tableHtml = "";
-    data.forEach(function ({ id,username, question }) {
+    data.forEach(function ({ id,username, question ,image}) {
         // console.log(question);
-        tableHtml +=
-            `
+        if(image!=null){
 
-        <div class="post1">
-
-            <div class="subpost0">
-                <div class="uicon">
-                    <i class="fas fa-portrait"></i> 
-                </div>
-                <div class="para">
-                    <p>${username}</p>
-                </div>
-                <div id="voting">
-
-
-                        <button id="likebtn${id}" class="like-dislike">
-                          <i class="fa fa-thumbs-up"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input${id}" class="input-like-dislike" value="${Math.floor(Math.random() * 6) + 100}" name="">
-                      
-                      
-                        <button id="dislikebtn${id}" class="like-dislike">
-                          <i class="fa fa-thumbs-down"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input${id + 100}" class="input-like-dislike" value="${Math.floor(Math.random() * 6) + 10}" name="">
-                      
-                      </div>
-            </div>
-
-            <div class="subpost1">
-            ${question}
-            </div>
-
-        </div>
-
-        <div class="seeall">
-            <a href="#">SEE ALL ANSWERS &nbsp;>></a>
-        </div>
-`
+          tableHtml +=
+          `
+          <li class="comment">
+          <div class="vcard bio">
+          <img class="profilePic" src="${image}" alt="Image placeholder">
+          </div>
+          <div class="comment-body justify-content-center">
+          <h3 class="vunro1">${username}</h3>
+          <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+          <p>${question}</p>
+          <p>
+          <a href="#w" class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</a>&nbsp;
+          <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+          <button id="likebtn${id}" class="like-dislike">
+          <i class="fa fa-thumbs-up"></i>
+          
+          
+          </button>
+          <button id="dislikebtn${id}" class="like-dislike">
+          <i class="fa fa-thumbs-down"></i>
+          
+          
+          </button>
+          <!-- reply form input -->
+          <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
+          <textarea placeholder="Reply to comment" rows="4"></textarea>
+          <button  class="reply" type="submit" style="border: none;">Submit</button>
+          <button class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- reply form end -->
+          </p>
+          </div>
+          </li>
+          `
+        }else{
+          tableHtml +=
+          `
+          <li class="comment">
+          <div class="vcard bio">
+          <img class="profilePic" src="images/person_1.jpg" alt="Image placeholder">
+          </div>
+          <div class="comment-body justify-content-center">
+          <h3 class="vunro1">${username}</h3>
+          <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+          <p>${question}</p>
+          <p>
+          <a href="#w" class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</a>&nbsp;
+          <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+          <button id="likebtn${id}" class="like-dislike">
+          <i class="fa fa-thumbs-up"></i>
+          
+          
+          </button>
+          <button id="dislikebtn${id}" class="like-dislike">
+          <i class="fa fa-thumbs-down"></i>
+          
+          
+          </button>
+          <!-- reply form input -->
+          <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
+          <textarea placeholder="Reply to comment" rows="4"></textarea>
+          <button  class="reply" type="submit" style="border: none;">Submit</button>
+          <button class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- reply form end -->
+          </p>
+          </div>
+          </li>
+          `
+        }
 
     });
     table.innerHTML = tableHtml;
@@ -125,7 +198,7 @@ function loadHTMLTable(data) {
 //blog and posts
 function loadHTMLTable1(data) {
 
-    const trend = document.getElementById('trend');
+    const trend = document.getElementById('postmainbox');
     //    console.log(data);
     if (data.length == 0) {
         trend.innerHTML = "<div>No data</div>";
@@ -134,53 +207,83 @@ function loadHTMLTable1(data) {
     }
   
     let trendHtml = "";
-    data.forEach(function ({ id, username, blogs }) {
+    data.forEach(function ({ id, username, blogs,image }) {
+      if (image!=null){
+        
         trendHtml +=
-            ` 
-
-
-            <div class="toptrendpost1">
-
-                <div class="trenpost0">
-                    <div class="trenuicon">
-                        <i class="fas fa-portrait"></i> 
-                    </div>
-                    <div class="trenpara">
-                        <p>${username}</p>
-                    </div>
-                    <div id="voting">
-
-
-                    <button id="likebtn${id + 100}" class="like-dislike">
-                      <i class="fa fa-thumbs-up"></i>
-                  
-                  
-                    </button>
-                    <input type="number" id="input${id + 200}" class="input-like-dislike" value="${Math.floor(Math.random() * 6) + 100}" name="">
-                  
-                  
-                    <button id="dislikebtn${id + 100}" class="like-dislike">
-                      <i class="fa fa-thumbs-down"></i>
-                  
-                  
-                    </button>
-                    <input type="number" id="input${id + 300}" class="input-like-dislike" value="${Math.floor(Math.random() * 6) + 50}" name="">
-                  
-                  </div>
-                </div>
-
-                <div class="trenpost1">
-                ${blogs}
-                </div>
-
-            </div>
-
-            <div class="viewcomm">
-                <a href="#"><i class="fas fa-eye"></i>&nbsp; views</a>
-                <a href="#"><i class="far fa-comment-dots"></i>&nbsp; Comments</a>
-            </div>`
-
-    });
+        ` 
+        
+        <div class="card mb-5" >
+        <div class="card-header">
+        <div class="vcard bio">
+        <img src="${image}" alt="Image placeholder" class="dppost">
+        </div>
+        <h5 class="pull-left"> ${username}</h5>
+        <div class="pull-right">
+        <a href="#h" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i>
+        Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#o" class="erans" id="likebtn${id + 100}"><i class="fa fa-thumbs-up" aria-hidden="true"
+        id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form"
+        data-target="comment-1-replycm-form"><i class="fa fa-comment" aria-hidden="true"
+        id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+        </div>
+        <!-- comment form input -->
+        <form method="POST" class="replycm-form d-none" id="comment-1-replycm-form">
+        <textarea placeholder="Reply to comment" rows="4"></textarea>
+        <button class="reply" type="submit" style="border: none;">Submit</button>
+        <button class="reply" type="button" data-toggle="replycm-form"
+        data-target="comment-1-replycm-form" style="border: none;">Cancel</button>
+        </form>
+        <!-- comment form end -->
+        
+        </div>
+        <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+        <div class="card-body" id="crdpost">
+        <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+        <p class="card-text" id="crdpost">${blogs}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        </div>`
+      }else{
+        trendHtml +=
+        ` 
+        
+        <div class="card mb-5" >
+        <div class="card-header">
+        <div class="vcard bio">
+        <img src="images/person_1.jpg" alt="Image placeholder" class="dppost">
+        </div>
+        <h5 class="pull-left"> ${username}</h5>
+        <div class="pull-right">
+        <a href="#h" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i>
+        Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#o" class="erans" id="likebtn${id + 100}"><i class="fa fa-thumbs-up" aria-hidden="true"
+        id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form"
+        data-target="comment-1-replycm-form"><i class="fa fa-comment" aria-hidden="true"
+        id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+        </div>
+        <!-- comment form input -->
+        <form method="POST" class="replycm-form d-none" id="comment-1-replycm-form">
+        <textarea placeholder="Reply to comment" rows="4"></textarea>
+        <button class="reply" type="submit" style="border: none;">Submit</button>
+        <button class="reply" type="button" data-toggle="replycm-form"
+        data-target="comment-1-replycm-form" style="border: none;">Cancel</button>
+        </form>
+        <!-- comment form end -->
+        
+        </div>
+        <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+        <div class="card-body" id="crdpost">
+        <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+        <p class="card-text" id="crdpost">${blogs}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        </div>`
+      }
+        
+      });
     trend.innerHTML = trendHtml;
 
 }
@@ -189,109 +292,112 @@ function loadHTMLTable1(data) {
 
 
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// post modal
-
-// Get the modal
-var modal2 = document.getElementById("myModal-2");
-
-// Get the button that opens the modal
-var btn2 = document.getElementById("myBtn-2");
-
-// Get the <span> element that closes the modal
-var span2 = document.getElementsByClassName("close-2")[0];
-
-// When the user clicks the button, open the modal 
-btn2.onclick = function () {
-    modal2.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span2.onclick = function () {
-    modal2.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
-
 
 
 // like dislike js
 
 
-
-
-function likes(likebutton,dislikebutton,input01,input02) {
+setTimeout(() => {
   
-  console.log(likebutton);
+  likes('likebtn1','dislikebtn1');  
+  likes('likebtn2','dislikebtn2');  
+  
+  likes('likebtn3','dislikebtn3');  
+  
+  likes('likebtn4','dislikebtn4');  
+  
+  likes('likebtn5','dislikebtn5');  
+  
+  likesBlog('likebtn101');
+  
+  likesBlog('likebtn102');
+  
+  likesBlog('likebtn103');
+  
+  likesBlog('likebtn104');
+  
+  likesBlog('likebtn105');          
+}, 500);
+
+function likesBlog(likebutton) {
+  
+  let likebtn = document.querySelector(`#${likebutton}`); 
+  
+  
+  likebtn.addEventListener('click',()=>{
+    if(likebtn.style.color !="blue"){
+      likebtn.style.color ="blue";
+    }
+    else{
+      likebtn.style.color="#243233"
+    }
+  })
+  
+  
+  
+  
+}
+
+
+function likes(likebutton,dislikebutton) {
+  
 let likebtn = document.querySelector(`#${likebutton}`);
 let dislikebtn = document.querySelector(`#${dislikebutton}`);
-let input1 = document.querySelector(`#${input01}`);
-let input2 = document.querySelector(`#${input02}`);
+
 
 
 likebtn.addEventListener('click',()=>{
-  input1.value = parseInt(input1.value) + 1;
-  input1.style.color ="#12ff00";
+  if(dislikebtn.style.color=="red"){
+    dislikebtn.style.color="grey"
+  }
+  if(likebtn.style.color !="green"){
+    likebtn.style.color ="green";
+  }
+  else{
+    likebtn.style.color="grey"
+  }
+  
 })
 
 
 dislikebtn.addEventListener('click',()=>{
-  input2.value = parseInt(input2.value) + 1;
-  input2.style.color ="#ff0000";
+  if(likebtn.style.color=="green"){
+    likebtn.style.color="grey"
+  }
+  if(dislikebtn.style.color !="red"){
+    dislikebtn.style.color ="red";
+  }
+  else{
+    dislikebtn.style.color="grey"
+  }
+  
 })
 
 }
-setTimeout(() => {
-  
-  likes('likebtn1','dislikebtn1','input1','input101');  
-  likes('likebtn2','dislikebtn2','input2','input102');  
-  
-  likes('likebtn3','dislikebtn3','input3','input103');  
-  
-  likes('likebtn4','dislikebtn4','input4','input104');  
-  
-  likes('likebtn5','dislikebtn5','input5','input105');  
-  
-  likes('likebtn101','dislikebtn101','input201','input301');
-  
-  likes('likebtn102','dislikebtn102','input202','input302');
-  
-  likes('likebtn103','dislikebtn103','input203','input303');
-  
-  likes('likebtn104','dislikebtn104','input204','input304');
-  
-  likes('likebtn105','dislikebtn105','input205','input305');          
-}, 500);
 
 
-//Upload Image
+
+//For sending Mail
+
+const sendMail = document.getElementById('#sendMail');
+
+
+sendMail.onclick = function () {
+  let firstName = document.getElementById('#firstName');
+  let lastName = document.getElementById('#lastName');
+  let subject = document.getElementById('#subject');
+  let email = document.getElementById('#email');
+  let contentMail = document.getElementById('#contentMail');
+   
+
+
+    fetch('http://localhost:5000/mail', {
+        headers: {
+            'Content-type': 'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify({ firstName: firstName, lastName: lastName, subject:subject, email:email, contentMail:contentMail })
+    })
+        .then(response => response.json())
+    // .then(data => insertRowIntoTable(data['data']));
+}

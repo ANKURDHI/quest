@@ -81,7 +81,7 @@ async getAllData3(){
 
 
 
-// insert
+// insert question
 async insertNewName(username , question) {
     try {
        
@@ -99,6 +99,32 @@ async insertNewName(username , question) {
             // id : insertId,
            username : username,
             question : question
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+// insert blog
+async insertNewBlog(username , blogs) {
+    try {
+       
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = "INSERT INTO blog(username, blogs) VALUES (?,?);";
+            
+            connection.query(query, [username, blogs] , (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            // id : insertId,
+           username : username,
+            blogs : blogs
         };
     } catch (error) {
         console.log(error);
