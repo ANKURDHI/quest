@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link href=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quest</title>
+    <script src="https://cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rr-vsZz-zcI8MRJkaEBu3FjE_TfkY2fJTw&usqp=CAU">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(207, 229, 229);
+        }
+     #subblog1{
+        /* margin-left:35.5rem; */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+     }
+
+    </style>
+</head>
+<body>
+    <!-- first section of search bar start................................................................... -->
+
+
+<section class="header-main border-bottom "  id="firsthead">
+    <div class="container-fluid">
+        <div class="row  d-flex align-items-center">
+            <div class="col-md-2"> <img class="d-none d-md-flex" src="https://img.icons8.com/clouds/200/000000/quora.png" id="brandico" > </div>
+           
+            <div class="col-md-8">
+                <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Search an..."> <i class="fa fa-search" aria-hidden="true" id="iconse"></i> </div>
+            </div>
+            <div class="col-md-2 ml-0">
+                <div class="d-flex d-none d-md-flex flex-row align-items-center" id="ddse"> 
+                   <div class="d-flex flex-column ms-2"><span class="qty">QSearch</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
+       
+  <!-- first section of search bar end................................................................................ -->
+  
+  
+  
+  <!-- navigation bar 1 start.......................................................................................... -->
+  
+    <div class="site-wrap">
+  
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+     
+      
+      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+        
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <div class="site-logo mr-auto w-25"><a href="index.html" class="qty2">Quest</a></div>
+  
+            <div class="mx-auto text-center">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                  <li><a href="index.html#home-section" class="nav-link">Home</a></li>
+                  <li><a href="#blog-section" class="nav-link">Blogs</a></li>
+                  <!-- <li><a href="#" class="nav-link">Create</a></li> -->
+                 
+                  <li><a href="index.html#au-section" class="nav-link">About us</a></li>
+                  <li><a href="index.html#help-section" class="nav-link">Help</a></li>
+                  <!-- <li><a href="#" class="nav-link " id="mbnavvv">Create</a></li> -->
+                </ul>
+              </nav>
+            </div>
+  
+            <div class="ml-auto w-25">
+              <nav class="site-navigation position-relative text-right" >
+                <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                  <li class="cta"><a href="UserProfile.html" class="nav-link" ><i class="fa fa-user-circle" id="accicio"></i></a></li>
+                <!-- data-toggle="modal" data-target="#exampleModal9o" -->
+                </ul>
+              </nav>
+              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+            </div>
+          </div>
+        </div>
+        
+      </header>
+<!-- Modal for account -->
+  <!-- id is examplemodal when you click on logout button this will open -->
+  <div class="modal fade text-black" id="exampleModal9o" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9o" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel9o"><B>USERBOX</B></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" id="crossicon">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+            <!-- UserPhoto coming from database -->
+            <a href="#"><img src="userphoto" alt="userphoto" width="40px" height="auto"></a>
+
+            <!-- username will come here -->
+            <h3 id="uname" name="uname">HimanshuSR</h3>
+            <h3 style="margin-bottom: 17px; font-size: 24px;">Groups I am part of: "Value from db"</h3>
+
+            <div class="addac">
+            <h3 id="addanother"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<a href="login.html">Add Another Account</a></h3>
+            </div>
+            <div class="addac">
+                
+                <h3 id="privacytnc"><i class="fa fa-sticky-note-o"></i>&nbsp;<a href="#privacypage"> Privacy and T&C</a></h3>
+             </div>
+             <div class="addac">
+             
+            <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"> <i class="fa fa-sign-out"></i>&nbsp;<a href="#logout">SignOut</a></button></h3>
+        </div>
+        </div>
+
+
+
+        <div class="modal-footer">
+          <!-- class="btn btn-secondary" -->
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- account modal end -->
+
+      <br>
+      <br>
+      <br>
+    <form action="" method="post">
+    <textarea name="editor1">
+       <b>Write your opinions/thoughts/ideas</b>
+    </textarea>
+    <!-- <input type="submit" name="submitblog" id="subblog1" class="cta1"> -->
+    <center>
+    <button type="submit" class="btn btn-outline-secondary " id="subblog1">Submit</button>
+    </center>
+    </form>
+
+    <script>
+            CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>

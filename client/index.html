@@ -1,591 +1,814 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index1</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <head>
+    <title>Quest &mdash;</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- aos lib  and css  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link href=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
-<link rel="icon" href="https://img.icons8.com/clouds/200/000000/quora.png" />
-</head>
-<body>
-    <div class="topnav">
-        <div class="topnav1">
-            <a href="#">
-                <h1>
-                    <img src="https://img.icons8.com/clouds/200/000000/quora.png"/ id="logoimg" width="90px" height="auto">
-                </h1>
-            </a>
-            <a href="#" id="taglink"><h1 id="tag">Quest</h1> </a>
-        </div>
-        <div class="topnav2">
-            <div class="search-box">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
-                <input type="search" class="search-input" placeholder="Enter Your Search..">
-                <button class="search-button">
-                  <i class="fas fa-search"></i>
-                </button>
- 
-             </div>
-        </div>
-        <div class="topnav3">
-            <a href="logoutpage.html">
-                <div class="uicon">
-                   <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-user-interface-kiranshastry-solid-kiranshastry.png" id="uimg">
-                </div>
-                </a>
-        </div>
-    </div>
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-      <!-- navbar start  -->
-      <nav>
-        <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">AboutUs</a>
-        <a href="#">Help</a>
-     </div>
-    </nav>
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    
      
-    
-    
-        <!-- Main Body Start from here -->
-        <div class="mainbody">
-            <div class="mbnav">
-                <div class="mbnav1">
-                    <a href="#" id="myBtn">Ask <i class="far fa-question-circle"></i></a>
+  </head>
 
 
-                    
-    <!-- Trigger/Open The Modal -->
 
-<!-- <a href="#" id="myBtn">ASk Questions</a> -->
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="ask1">
 
-        <div class="subask0">
-            <div class="askicon">
-                <i class="fas fa-portrait"></i> 
-            </div>
-            <div class="askpara">
-                <p id="user">username</p>
-            </div>
-            
-        </div>
+<!-- first section of search bar start................................................................... -->
 
-        <div class="askpost1">
-        <input type="text" id="name-input" value="Questions asked in a format to be discussed" 
-        style="font-size: 18pt; height: 100px; width:100%;" >
-        <br><br><br><br>
-        <div class="asklink">
-            <a href="#">Cancel</a>
-            <a id="add-name-btn" href="#">Add Question</a>
-        </div>
-        </div>
 
-    </div>
-
+<section class="header-main border-bottom " style="background-color: rgb(207, 229, 229);" id="firsthead">
+  <div class="container-fluid">
+      <div class="row  d-flex align-items-center">
+          <div class="col-md-2"> <img class="d-none d-md-flex" src="https://img.icons8.com/clouds/200/000000/quora.png" id="brandico" > </div>
+         
+          <div class="col-md-8">
+              <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Search an..."> <i class="fa fa-search" aria-hidden="true" id="iconse"></i> </div>
+          </div>
+          <div class="col-md-2 ml-0">
+              <div class="d-flex d-none d-md-flex flex-row align-items-center" id="ddse"> 
+                 <div class="d-flex flex-column ms-2"><span class="qty">QSearch</span></div>
+              </div>
+          </div>
+      </div>
   </div>
+</section>
 
 
+     
+<!-- first section of search bar end................................................................................ -->
+
+
+
+<!--main navigation bar start.......................................................................................... -->
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="index.html" class="qty2">Quest</a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="readblog.html" class="nav-link">Blogs</a></li>
+                <!-- <li><a href="#" class="nav-link">Create</a></li> -->
+                <li class="dropdown">
+
+                  <!--Trigger-->
+                  <a class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Create</a>
+               
+                  <!--Menu-->
+                  <div class="dropdown-menu dropdown-primary">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1" data-whatever="item 1">Question   <i class="fa fa-question-circle" aria-hidden="true" id="scndnavico"></i></a>
+                    <!-- <a class="dropdown-item" href="#">Answer <i class="fa fa-pencil-square" aria-hidden="true" id="scndnavico"></i></a> -->
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal2" data-whatever="item 2">Post <i class="fa fa-camera"></i></a>
+                    <a class="dropdown-item" href="writeeblog.html">Write Blog <i class="fa fa-edit"></i></a>
+                  </div>
+                </li>
+                <li><a href="#au-section" class="nav-link">About us</a></li>
+                <li><a href="#help-section" class="nav-link">Help</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" >
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+                <!-- <li class="cta"><a href="login.html" class="nav-link"><span>Login</span></a></li> -->
+                <li class="cta"><a href="UserProfile.html" class="nav-link" ><i class="fa fa-user-circle" id="accicio"></i></a></li>
+                <!-- data-toggle="modal" data-target="#exampleModal9o" -->
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+    
+
+
+<!--Modal for ccreate dropdown-->
+<div class="modal fade text-black" id="exampleModal1" 
+tabindex="-1" role="dialog" 
+aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" 
+                id="exampleModalLabel">
+                Write a Question
+            </h5>
+            <button type="button" class="close" 
+                data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <!-- form tag start -->
+          <form>
+          <div class="form-outline">
+            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+            <!-- <label class="form-label" for="textAreaExample"></label> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class=
+                "btn btn-secondary" data-dismiss="modal" >
+                Submit
+            </button>
+            <button type="button" class=
+                "btn btn-secondary" data-dismiss="modal" >
+                Close
+            </button>
+          </form>
+          <!-- form tag end -->
+        </div>
+    </div>
+</div>
+</div>
+<!-- another for create -->
+<div class="modal fade text-black" id="exampleModal2" 
+tabindex="-1" role="dialog" 
+aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" 
+                id="exampleModalLabel">
+                Post</h5>
+            <button type="button" class="close" 
+                data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <!-- form tag start -->
+          <form>
+          <label for="formFileMultiple" class="form-label">Chose multiples pictures or video to upload</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple />
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class=
+                "btn btn-secondary" data-dismiss="modal" >
+                Submit
+            </button>
+            <button type="button" 
+                class="btn btn-secondary" 
+                data-dismiss="modal">
+                Close
+            </button>
+            </form>
+            <!-- form tag end -->
+        </div>
+    </div>
+</div>
 </div>
 
+<!--create modal end -->
 
 
+ <!-- Modal for account -->
+  <!-- id is examplemodal when you click on logout button this will open -->
+  <div class="modal fade text-black" id="exampleModal9o" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9o" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
 
 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel9o"><B>USERBOX</B></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" id="crossicon">&times;</span>
+          </button>
+        </div>
 
-                    <a href="answerpage.html">Answer <i class="fas fa-pen-square"></i></a>
 
+        <div class="modal-body">
+            <!-- UserPhoto coming from database -->
+            <a href="#"><img src="userphoto" alt="userphoto" width="40px" height="auto"></a>
 
+            <!-- username will come here -->
+            <h3 id="uname" name="uname">HimanshuSR</h3>
+            <h3 style="margin-bottom: 17px; font-size: 24px;">Groups I am part of: "Value from db"</h3>
+
+            <div class="addac">
+            <h3 id="addanother"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<a href="login.html">Add Another Account</a></h3>
+            </div>
+            <div class="addac">
                 
+                <h3 id="privacytnc"><i class="fa fa-sticky-note-o"></i>&nbsp;<a href="#privacypage"> Privacy and T&C</a></h3>
+             </div>
+             <div class="addac">
+             
+            <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"> <i class="fa fa-sign-out"></i>&nbsp;<a href="#logout">SignOut</a></button></h3>
+        </div>
+        </div>
 
 
 
-
-
-
-
-                    
-                    <a href="#" id="myBtn-2">Post <i class="fas fa-camera"></i></a>
-
-
-<!-- The Modal -->
-<div id="myModal-2" class="modal">
-
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close-2">&times;</span>
-      <div class="ask1">
-  
-          <div class="subask0">
-              <div class="askicon">
-                  <i class="fas fa-portrait"></i> 
-              </div>
-              <div class="askpara">
-                  <p id="user">username</p>
-              </div>
-              
-          </div>
-  
-         <form action="/" method="POST" id="post-image" encType="multipart/form-data">
-            <h3>Add Post</h3>
-            <input type="file" name="choose a file" accept="image/"/><br>
-             <input type="submit"  class="btn btn-primary">
-         </form>
-  
+        <div class="modal-footer">
+          <!-- class="btn btn-secondary" -->
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
       </div>
-  
+
+
     </div>
-  
-  
+
   </div>
 
-                    <a href="blog.html">Write a Blog <i class="fas fa-edit"></i></a>
-                   
-                </div>
-                <!-- <div class="mbnav2">
-                    <a href="#">Your Rating <i class="fas fa-user-check"></i></a>
-                </div> -->
+  <!-- account modal end -->
+
+
+
+    <!-- navigation bar 1 end.......................................................................... -->
+
+    <!-- #d2ece8 -->
+
+
+  <!-- Main body intro section start.................................................................... -->
+
+    <div class="intro-section" id="home-section">
+     <!-- intro section background div ..........-->
+    <div class="slide-1" style="background-color:rgb(207, 229, 229);" data-stellar-background-ratio="0.5">
+      
+      <!--top question box base.......  -->
+        <div class="container">
+        <div class="row ">
+        <div class="col-12">
+          
+          <div class="row align-content-center" id="sspacee">
+                  
+                  <div class="p-5 mb-4 bg-light rounded-3 w-100" >
+
+                    <!-- <div class="row">
+                      <div class=" text-center">
+                        
+                      </div>
+                      </div> -->
+
+
+
+                  <h2  data-aos="fade-up" data-aos-delay="100" id="ff1">Top Questions For You</h1>
+                
+                 
+       <!--questions are stated here............  -->
+       <!-- question1 -->
+                    <ul class="comment-list mt-5" data-aos="fade-up" data-aos-delay="100">
+                      <li class="comment">
+                        <div class="vcard bio">
+                          <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body justify-content-center">
+                          <h3 class="vunro1">User name</h3>
+                          <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+                          <p>Lorem ipsum dolor sit amet,nihil?</p>
+                          <p>
+                            <a href="#w" class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</a>&nbsp;
+                            <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+                            <a href="#a" class="reply" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i></a>&nbsp;
+                            <a href="#h" class="reply"><i class="fa fa-thumbs-down" aria-hidden="true" id="scndnavico"></i></a>
+                            <!-- reply form input -->
+                            <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
+                              <textarea placeholder="Reply to comment" rows="4"></textarea>
+                              <button class="reply" type="submit" style="border: none;">Submit</button>
+                              <button class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form" style="border: none;">Cancel</button>
+                          </form>
+                          <!-- reply form end -->
+                          </p>
+                        </div>
+                      </li>
+                      </ul>
+                      
+        <!-- question2 -->
+        <ul class="comment-list mt-5" data-aos="fade-up" data-aos-delay="100">
+          <li class="comment">
+            <div class="vcard bio">
+              <img src="images/person_1.jpg" alt="Image placeholder">
             </div>
-                <!-- do changes like these so that when a user click on next page only 
-                post area se post change ho and not whole page -->
-                <!-- <h1>Top Questions For You</h1> --><h1>Top Questions For You</h1>
-            <div class="postarea" id="questions">
-
-                <h1>Top Questions For You</h1>
-
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div id="voting">
-
-
-                            <button id="likebtn"  class="like-dislike">
-                              <i class="fa fa-thumbs-up"></i>
-                          
-                          
-                            </button>
-                            <input type="number" id="input1" class="input-like-dislike" value="0" name="">
-                          
-                          
-                            <button id="dislikebtn"  class="like-dislike">
-                              <i class="fa fa-thumbs-down"></i>
-                          
-                          
-                            </button>
-                            <input type="number" id="input2" class="input-like-dislike" value="0" name="">
-                          
-                          </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                <div class="seeall">
-                    <a href="answerpage.html">SEE ALL ANSWERS &nbsp;>></a>
-                </div>
-
-                <div class="nextpage">
-                    <a href="#">Next &nbsp; >></a>
-                    </div>
-
-                <!-- <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">245</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">167</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                <div class="seeall">
-                    <a href="#">SEE ALL ANSWERS &nbsp;>></a>
-                </div>
-
-                
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">145</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">167</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                <div class="seeall">
-                    <a href="#">SEE ALL ANSWERS &nbsp;>></a>
-                </div>
-
-                
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">76</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">167</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                <div class="seeall">
-                    <a href="#">SEE ALL ANSWERS &nbsp;>></a>
-                </div>
-
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">24</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">14</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">76</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">167</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">62</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">67</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                
-                <div class="post1">
-
-                    <div class="subpost0">
-                        <div class="uicon">
-                            <i class="fas fa-portrait"></i> 
-                        </div>
-                        <div class="para">
-                            <p>UserName</p>
-                        </div>
-                        <div class="lc">
-                        <i class="far fa-thumbs-up">45</i>&emsp;&emsp;&emsp;<i class="fas fa-caret-up">16</i>
-                        </div>
-                    </div>
-
-                    <div class="subpost1">
-                    Questions asked in a format to be discussed
-                    </div>
-
-                </div>
-
-                <div class="nextpage">
-                <a href="#">Next &nbsp; >></a>
-                </div> -->
-                
+            <div class="comment-body justify-content-center">
+              <h3 class="vunro1">User name</h3>
+              <!-- if you want to add time..... -->
+              <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+              <p>Lorem ipsum dolor sit amet, nihil?</p>
+              <p>
+                <a href="#g" class="reply" type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Reply</a>&nbsp;
+                <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+                <a href="#o" class="reply" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i></a>&nbsp;
+                <a href="#d" class="reply"><i class="fa fa-thumbs-down" aria-hidden="true" id="scndnavico"></i></a>
+              <!-- reply form input -->
+              <form method="POST" class="reply-form d-none" id="comment-2-reply-form">
+                <textarea placeholder="Reply to comment" rows="4"></textarea>
+                <button class="reply" type="submit" style="border: none;">Submit</button>
+                <button class="reply" type="button" data-toggle="reply-form" data-target="comment-2-reply-form" style="border: none;">Cancel</button>
+            </form>
+            <!-- reply form end -->
+              </p>
             </div>
+          </li>
+          </ul>
 
-            
+          <ul class="comment-list mt-5" data-aos="fade-up" data-aos-delay="100">
+            <li class="comment">
+              <div class="vcard bio">
+                <img src="images/person_1.jpg" alt="Image placeholder">
+              </div>
+              <div class="comment-body justify-content-center">
+                <h3 class="vunro1">User name</h3>
+                <!-- if you want to add time..... -->
+                <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+                <p>Lorem ipsum dolor sit amet, nihil?</p>
+                <p>
+                  <a href="#f" class="reply" type="button" data-toggle="reply-form" data-target="comment-3-reply-form">Reply</a>&nbsp;
+                  <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+                  <a href="#n" class="reply" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i></a>&nbsp;
+                  <a href="#e" class="reply"><i class="fa fa-thumbs-down" aria-hidden="true" id="scndnavico"></i></a>
+                <!-- reply form input -->
+                <form method="POST" class="reply-form d-none" id="comment-3-reply-form">
+                  <textarea placeholder="Reply to comment" rows="4"></textarea>
+                  <button class="reply" type="submit" style="border: none;">Submit</button>
+                  <button class="reply" type="button" data-toggle="reply-form" data-target="comment-3-reply-form" style="border: none;">Cancel</button>
+              </form>
+              <!-- reply form end -->
+                </p>
+              </div>
+            </li>
+            </ul>
 
 
-        </div>
+            <ul class="comment-list mt-5" data-aos="fade-up" data-aos-delay="100">
+              <li class="comment">
+                <div class="vcard bio">
+                  <img src="images/person_1.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body justify-content-center">
+                  <h3 class="vunro1">User name</h3>
+                  <!-- if you want to add time..... -->
+                  <!-- <div class="meta">January 9, 2018 at 2:21pm</div> -->
+                  <p>Lorem ipsum dolor sit amet, nihil?</p>
+                  <p>
+                    <a href="#h" class="reply" type="button" data-toggle="reply-form" data-target="comment-4-reply-form">Reply</a>&nbsp;
+                    <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
+                    <a href="#l" class="reply" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i></a>&nbsp;
+                    <a href="#o" class="reply"><i class="fa fa-thumbs-down" aria-hidden="true" id="scndnavico"></i></a>
+                  <!-- reply form input -->
+                  <form method="POST" class="reply-form d-none" id="comment-4-reply-form">
+                    <textarea placeholder="Reply to comment" rows="4"></textarea>
+                    <button class="reply" type="submit" style="border: none;">Submit</button>
+                    <button class="reply" type="button" data-toggle="reply-form" data-target="comment-4-reply-form" style="border: none;">Cancel</button>
+                </form>
+                <!-- reply form end -->
+                  </p>
+                </div>
+              </li>
+              </ul>
+
+<!-- top question area ended -->
+                        
+                  <!-- <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p> -->
+
+</div></div></div></div>
 
 
 
-        <!-- trending post for you  -->
-        <div class="trenbody">
-            <h1>Trending post for you</h1>
-        <div class="trending" id="trend">
+
+     <!-- intro/question sesction ended............................................ -->
+                
+     
+   
+       <!--top post box base.......  -->
+         <!-- <div class="container"> -->
+         <div class="row ">
+         <div class="col-12">
            
+           <div class="row align-content-center" id="ssscdbx">
+                   
+                   <div class="p-5 mb-4 bg-light rounded-3 w-100">
+ 
+                     <!-- <div class="row">
+                       <div class=" text-center">
+                         
+                       </div>
+                       </div> -->
+ 
+ 
+ 
+                   <h2  data-aos="fade-up" data-aos-delay="100" id="ff1">Trending Post For You</h1>
+                 
+                  
+        <!--Post section stated here............  -->
+        <!-- Post1 -->
+        <!-- here dono change this postmainbox as an id or dont use it in any othe post its for only first post  -->
+        <div class="card mb-5" id="postmainbox" >
+          <div class="card-header">
+            <div class="vcard bio">
+              <img src="images/person_1.jpg" alt="Image placeholder" class="dppost">
+            </div>
+           <h5 class="pull-left"> Featured</h5><div class="pull-right" >
+              <a href="#h" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i> Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#o" class="" id="erans" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form" data-target="comment-1-replycm-form"><i class="fa fa-comment" aria-hidden="true" id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+            </div>
+              <!-- comment form input -->
+            <form method="POST" class="replycm-form d-none" id="comment-1-replycm-form">
+              <textarea placeholder="Reply to comment" rows="4"></textarea>
+              <button class="reply" type="submit" style="border: none;">Submit</button>
+              <button class="reply" type="button" data-toggle="replycm-form" data-target="comment-1-replycm-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- comment form end -->
+           
+          </div>
+          <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+          <div class="card-body" id="crdpost">
+            <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+            <p class="card-text" id="crdpost">This is a w a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+ 
+         <!-- post2 -->
+         <div class="card mb-5" >
+          <div class="card-header">
+            <div class="vcard bio">
+              <img src="images/person_1.jpg" alt="Image placeholder" class="dppost">
+            </div>
+           <h5 class="pull-left"> Featured</h5><div class="pull-right" >
+              <a href="#a" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i> Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#r" class="" id="erans" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form" data-target="comment-2-replycm-form"><i class="fa fa-comment" aria-hidden="true" id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+            </div>
+              <!-- comment form input -->
+            <form method="POST" class="replycm-form d-none" id="comment-2-replycm-form">
+              <textarea placeholder="Reply to comment" rows="4"></textarea>
+              <button class="reply" type="submit" style="border: none;">Submit</button>
+              <button class="reply" type="button" data-toggle="replycm-form" data-target="comment-2-replycm-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- comment form end -->
+          </div>
+          <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+          <div class="card-body" id="crdpost">
+            <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+            <p class="card-text" id="crdpost">This is a wide little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+<!-- post3 -->
+<div class="card mb-5" >
+  <div class="card-header">
+    <div class="vcard bio">
+      <img src="images/person_1.jpg" alt="Image placeholder" class="dppost">
+    </div>
+   <h5 class="pull-left"> Featured</h5><div class="pull-right" >
+      <a href="#y" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i> Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#o" class="" id="erans" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form" data-target="comment-3-replycm-form"><i class="fa fa-comment" aria-hidden="true" id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+            </div>
+              <!-- comment form input -->
+            <form method="POST" class="replycm-form d-none" id="comment-3-replycm-form">
+              <textarea placeholder="Reply to comment" rows="4"></textarea>
+              <button class="reply" type="submit" style="border: none;">Submit</button>
+              <button class="reply" type="button" data-toggle="replycm-form" data-target="comment-3-replycm-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- comment form end -->
+  </div>
+  <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+  <div class="card-body" id="crdpost">
+    <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+    <p class="card-text" id="crdpost">This is a wider a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
 
+            
+<!-- post4 -->
 
-            <div class="toptrendpost1">
-
-                <div class="trenpost0">
-                    <div class="trenuicon">
-                        <i class="fas fa-portrait"></i> 
-                    </div>
-                    <div class="trenpara">
-                        <p>UserName</p>
-                    </div>
-                    <div id="voting">
-
-
-                        <button id="likebtn"  class="like-dislike">
-                          <i class="fa fa-thumbs-up"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input1" class="input-like-dislike" value="0" name="">
-                      
-                      
-                        <button id="dislikebtn"  class="like-dislike">
-                          <i class="fa fa-thumbs-down"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input2" class="input-like-dislike" value="0" name="">
-                      
-                      </div>
+            <div class="card mb-5 " >
+              <div class="card-header">
+                <div class="vcard bio">
+                  <img src="images/person_1.jpg" alt="Image placeholder" class="dppost">
                 </div>
+               <h5 class="pull-left"> Featured</h5><div class="pull-right" >
+                  <a href="#l" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i> Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#o" class="" id="erans" data-toggle="tooltip" data-placement="top" title="116 Likes"><i class="fa fa-thumbs-up" aria-hidden="true" id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form" data-target="comment-4-replycm-form"><i class="fa fa-comment" aria-hidden="true" id="scndnavico"></i> Comment</a>&nbsp;&nbsp;&nbsp;
+            </div>
+              <!-- comment form input -->
+            <form method="POST" class="replycm-form d-none" id="comment-4-replycm-form">
+              <textarea placeholder="Reply to comment" rows="4"></textarea>
+              <button class="reply" type="submit" style="border: none;">Submit</button>
+              <button class="reply" type="button" data-toggle="replycm-form" data-target="comment-4-replycm-form" style="border: none;">Cancel</button>
+          </form>
+          <!-- comment form end -->
+              </div>
+              <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+              <div class="card-body" id="crdpost">
+                <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
+                <p class="card-text" id="crdpost">This is a wider little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            
 
-                <div class="trenpost1">
-                Post will fetched here from the related database <br>
-                photo and if any caption will lie in this area only
-                you can adjust padding here because i have already provided height=auto 
-                padding u can adjust by your own  
-                </div>
+            
+ 
+ <!-- top post area ended -->
+                         
+                   <!-- <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p> -->
+ 
+ </div></div></div></div></div></div>
+ </div></div></div>
 
+ <!-- post section ended................................................... -->
+ <!-- intro/post section ended -->
+
+    <!-- scieties section started -->
+    <div class="site-section courses-title" id="society-section">
+      <div class="container">
+        <div class="row mb-0 justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title" id="socifont">-- Society Clubs --</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+
+          <div class="owl-carousel col-12 nonloop-block-14">
+<!-- society card start.................. -->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$20</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">InfoTech Club</a></h3>
+                <p>A club for techies who are devoted to the tech world.</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
+            </div>
+<!-- club2 -->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/uuj.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$99</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">Art Club</a></h3>
+                <p>A club for the creative ones who love to play with colours.</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
+            </div>
+<!-- club3 -->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/appl.jpg" alt="Image" class="img-fluid mb-3"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$99</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">Music Club</a></h3>
+                <p>A club for the music devotees who love to sing dance and play. </p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
             </div>
 
-            <div class="viewcomm">
-                <a href="#"><i class="fas fa-eye"></i>&nbsp; views</a>
-                <a href="#"><i class="far fa-comment-dots"></i>&nbsp; Comments</a>
+<!-- club4 -->
+
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$20</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">Literary Club</a></h3>
+                <p>A club for the writers who can write anytime anywhere.</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
+            </div>
+<!-- club5 -->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/sp1.jpg" alt="Image" class="img-fluid mb-3"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$99</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">Sports Club</a></h3>
+                <p>A club for the gamers who love to play games online or offline.</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
+            </div>
+<!-- club6 -->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                <a href="course-single.html"><img src="images/ec2.jpg" alt="Image" class="img-fluid mb-3"></a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                <!-- <span class="course-price">$99</span> -->
+                <div class="meta"><span class="icon-clock-o"></span>Started in 2021</div>
+                <h3><a href="#">Eco Club</a></h3>
+                <p>A club for environment lovers who always care about nature.</p>
+              </div>
+              <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
+                <!-- <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div> -->
+              </div>
             </div>
 
+          </div>
 
+         
+<!-- previous and next button of carousel -->
+        </div>
+        <div class="row justify-content-center mt-0">
+          <div class="col-7 text-center">
+            <button class="customPrevBtn btn btn-primary m-1">Prev</button>
+            <button class="customNextBtn btn btn-primary m-1" >Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- society section ended -->
+
+<!-- about us section -->
+ <div class="site-section" id="au-section">
+
+    <div class="site-section bg-image overlay mt-5" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8 text-center testimony">
+            <img src="https://img.icons8.com/clouds/200/000000/quora.png" alt="Image" class="img-fluid w-25 mb-4 rounded-circle" >
+            <h3 class="mb-4" id="aunme"> -- Quest --</h3>
+            <blockquote>
+              <p>&ldquo; A platform for a particular organisation to connect on their own space without mgbmiogjiojriogjjrnmdfoicjkv  cjvfiogjriogf xjjeriogfrjf ddnreiojriof dnirjioer fnejeio frenfij4iro frenfio4i fjrnfioejr  4jnriojenfrg rgrjnf referjfn4f erfjenfe nfeif fj  &rdquo;</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <!--about us section ended  -->
+
+
+<!-- help section started -->
+<!-- message box -->
+      <div class="site-section bg-light" id="help-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-md-7">
 
 
             
-            <div class="toptrendpost1">
-
-                <div class="trenpost0">
-                    <div class="trenuicon">
-                        <i class="fas fa-portrait"></i> 
-                    </div>
-                    <div class="trenpara">
-                        <p>UserName</p>
-                    </div>
-                    <div id="voting">
-
-
-                        <button id="likebtn" class="like-dislike">
-                          <i class="fa fa-thumbs-up"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input1" class="input-like-dislike" value="0" name="">
-                      
-                      
-                        <button id="dislikebtn" class="like-dislike">
-                          <i class="fa fa-thumbs-down"></i>
-                      
-                      
-                        </button>
-                        <input type="number" id="input2" class="input-like-dislike" value="0" name="">
-                      
-                      </div>
-                     </div>
-
-                <div class="trenpost1">
-                Post will fetched here from the related database <br>
-                Here in html coding i have not given the ids to elements so that you can give them 
-                according to the backend however i will suggest name the ids similar to their class names
+            <h2 class="section-title mb-3">Message Us</h2>
+            <p class="mb-5">Feel free to contact us any time we will respond you.</p>
+          
+            <form method="post" data-aos="fade">
+              <div class="form-group row">
+                <div class="col-md-6 mb-3 mb-lg-0">
+                  <input type="text" class="form-control" placeholder="First name">
                 </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div> 
+              </div>
 
-            </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+              </div>
 
-            <div class="viewcomm">
-                <a href="#"><i class="fas fa-eye"></i>&nbsp; views</a>
-                <a href="#"><i class="far fa-comment-dots"></i>&nbsp; Comments</a>
-            </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <textarea class="form-control" id="" cols="30" rows="10" placeholder="Write your message here."></textarea>
+                </div>
+              </div>
 
+              <div class="form-group row">
+                <div class="col-md-6">
+                  
+                  <input type="submit" class="btn btn-primary py-3 px-5 btn-block btn-pill" value="Send Message">
+                </div>
+              </div>
+
+            </form>
+          </div>
         </div>
+      </div>
+    </div> 
+    <!-- message box ended -->
+    <!--foooter  -->
+    <div class="container" id="forrtxt">
+<center>
+      <p class="align-content-center">Follow Us on </p>
+</center>
     </div>
 
+    <div class="container-fluid" id="footbox">
+     
+      <ul class="socialIcons">
+        <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+        <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+        <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+        <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+       
+      </ul>
+    </div>
+    </div>
 
-            <div class="enrootingsociety">
-                <h1 style="text-align: center; color: brown; margin: 1rem;padding-bottom: 7px; border-bottom: 1px solid red;">-- The Enrooting Professionals Society --</h1>
-                
-            <div class="society">
-                <div class="club1">InfoTech
-                    <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkncdHTwqchGBeTdzj5uyXGX3_GKZujZz6w&usqp=CAU">
-                </a>
-                </div>
-                <div class="club2">Art&Culture
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTdZ75TWy4Ql4rl63JhMdiAoOHPBHVjufTw&usqp=CAU">
-                </a>
-                </div>
-                <div class="club3">Drama Society
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnVNydlN3ICOXxO70TDN0PkDUF_a_uvrTng&usqp=CAU">
-                </a>
-                </div>
-                <div class="club4">Music&Dance
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR3Ai5agLE-VVWsp3HabDNlbVbS3b6pEdbdA&usqp=CAU">
-                </a>
-                </div>
+        <div class="container   text-center" id="forrtxt">
+          
+            <p >
+         
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This WebPage is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://bpibs.in/" target="_blank" >Bpibs students</a>
+        
+     </p>
             </div>
+          <!--footer ended  -->
 
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
 
-
-            <div class="society">
-                <div class="club1"> Abhyas
-                    <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiegL18VzoSYvimagTkZUzX72zvF7oxUQ3Tw&usqp=CAU">
-                </a>
-                </div>
-                <div class="club2"> Hasya-Club
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsbQlRlSqpfGyxdfRyqtmEqNhAwt59mjkp4mws60jbROjKw4nhjxTdaO8Cibdyyh_pTUk&usqp=CAU">
-                </a>
-                </div>
-                <div class="club3"> Eco-Club
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWGbSyy8Ax8iaPN9-w8N3xq8OpjiREbgrJYLeRxzivQWgvJZ37ZWyV6f3WxUKwtWMCSQ&usqp=CAU">
-                </a>
-                </div>
-                <div class="club4"> Sahyog
-                <a href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZSF8dNlt_7jc6U4AgwW_XvyKU6oI8mOTPFc3oa7qgl2vZ2zDHTLB1cFqkTZMzaSFeV80&usqp=CAU">
-                </a>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-        <!-- Footer start -->
-        <footer>
-            <div class="icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="policy">
-                <a href="#">Terms of Use.Privacy Policy</a>
-            </div>
-            <!-- <div class="msg">
-                <p>Created By <span id="had">HSR</span> | &copy 2022 All Rights Reserved</p>
-            </div> -->
-        </footer>
-
-
-
-
-
-
-
-
-
-
-
-<script src="index.js"></script>
-<script>
-     function like(){
-    document.getElementsById('li').style.color = "blue"
-}
-</script>
-</body>
-</html>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html> -->
