@@ -1,7 +1,7 @@
 /* Base */
 body {
   line-height: 1.7;
-  color: white;
+  color: rgb(207, 229, 229);
   font-weight: 300;
   font-size: 1.1rem; }
 
@@ -1465,6 +1465,9 @@ margin-bottom: -900px;
 }
 #postmainbox{
   margin-top: 50px;
+}
+#querboxc{
+  width: 100%;
 }
 /* main body end */
 
