@@ -96,6 +96,14 @@ addBtn.onclick = function () {
     })
         .then(response => response.json())
     // .then(data => insertRowIntoTable(data['data']));
+    let message =document.getElementById('message');
+    message.innerHTML=`<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Question Added</h4>
+  </div>`;
+
+  setTimeout(() => {
+      message.innerHTML=``;
+  }, 5000);
 }
 
 
@@ -195,7 +203,7 @@ function loadHTMLTable(data) {
     });
     table.innerHTML = tableHtml;
 }
-//blog and posts
+// posts
 function loadHTMLTable1(data) {
 
     const trend = document.getElementById('postmainbox');
@@ -207,7 +215,7 @@ function loadHTMLTable1(data) {
     }
   
     let trendHtml = "";
-    data.forEach(function ({ id, username, blogs,image }) {
+    data.forEach(function ({ id, username, post,image }) {
       if (image!=null){
         
         trendHtml +=
@@ -241,7 +249,7 @@ function loadHTMLTable1(data) {
         <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
         <div class="card-body" id="crdpost">
         <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
-        <p class="card-text" id="crdpost">${blogs}</p>
+        <p class="card-text" id="crdpost"><img src="${post}" width="50%"></p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
         </div>`
@@ -277,7 +285,7 @@ function loadHTMLTable1(data) {
         <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
         <div class="card-body" id="crdpost">
         <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
-        <p class="card-text" id="crdpost">${blogs}</p>
+        <p class="card-text" id="crdpost"><img src="${post}"></p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
         </div>`
@@ -379,10 +387,11 @@ dislikebtn.addEventListener('click',()=>{
 
 //For sending Mail
 
-const sendMail = document.getElementById('#sendMail');
+const sendMail = document.getElementById('sendMail');
 
 
-sendMail.onclick = function () {
+sendMail.onclick = function (e) {
+  e.preventDefault();
   let firstName = document.getElementById('#firstName');
   let lastName = document.getElementById('#lastName');
   let subject = document.getElementById('#subject');

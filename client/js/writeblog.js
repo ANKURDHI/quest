@@ -16,5 +16,13 @@ addBtn.onclick = function (e) {
         body: JSON.stringify({ name: name1, blog: blog })
     })
         .then(response => response.json())
-    // .then(data => insertRowIntoTable(data['data']));
+        
+     let message =document.getElementById('message');
+     message.innerHTML=`<div class="alert alert-success" role="alert">
+   <h4 class="alert-heading">Blog Added</h4>
+      </div>`;
+    
+      setTimeout(() => {
+          message.innerHTML=``;
+      }, 5000);
 }

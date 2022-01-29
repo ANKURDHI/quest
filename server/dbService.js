@@ -45,7 +45,7 @@ class DbService{
     async getAllData2(){
         try{
             const response = await new Promise((resolve,reject)=>{
-                const query = "SELECT * FROM blog WHERE id <= 5;";
+                const query = "SELECT * FROM post WHERE id <= 5;";
                 connection.query(query,(err,results)=>{
                     if(err) reject(new Error(err.message));
                     resolve(results);
@@ -66,6 +66,23 @@ async getAllData3(){
     try{
         const response = await new Promise((resolve,reject)=>{
             const query = "SELECT * FROM users;";
+            connection.query(query,(err,results)=>{
+                if(err) reject(new Error(err.message));
+                resolve(results);
+            })
+        });
+        // console.log(response);
+    return response ;
+
+    }catch(error){
+        console.log(error);
+    }
+}
+
+async getAllBlog(){
+    try{
+        const response = await new Promise((resolve,reject)=>{
+            const query = "SELECT * FROM blog WHERE id <= 5;";
             connection.query(query,(err,results)=>{
                 if(err) reject(new Error(err.message));
                 resolve(results);

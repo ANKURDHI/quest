@@ -37,7 +37,7 @@ app.get('/getAll', (request, response) => {
 
 })
 
-//for blog
+//for post
 app.get('/getAll1', (request, response) => {
     const db = dbSerivce.getDbServiceInstance();
 
@@ -51,6 +51,25 @@ app.get('/getAll1', (request, response) => {
 
         .catch(err => console.log(err));
 
+
+
+
+
+})
+
+app.get('/getAllBlog', (request, response) => {
+    const db = dbSerivce.getDbServiceInstance();
+
+    const result = db.getAllBlog();
+
+
+
+    result
+
+        .then(data3 => response.json({ data: data3 }))
+
+        .catch(err => console.log(err));
+    
 
 
 
@@ -123,7 +142,7 @@ app.post('/mail', (request, response) => {
     const { contentMail } = request.body;
 
     
-
+    console.log(process.env.MAIL);
 
 let mailTransporter = nodemailer.createTransport({
 	service: 'gmail',
@@ -135,9 +154,9 @@ let mailTransporter = nodemailer.createTransport({
 
 let mailDetails = {
 	from: process.env.MAIL,
-	to: email,
+	to: 'adkumar881@gmail.com',
 	subject: subject,
-	text: contentMail
+	text: `Name:${firstName} ${lastName},content:${contentMail} , Contact mail:${email}`
 };
 
 mailTransporter.sendMail(mailDetails, function(err, data) {
