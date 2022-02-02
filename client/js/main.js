@@ -346,3 +346,6 @@ document.addEventListener(
       }
     }
    
+
+	// admin
+	
