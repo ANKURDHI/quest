@@ -1,422 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Quest &mdash;</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
 
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+<head>
+  <title>Quest &mdash;</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link href=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="https://img.icons8.com/clouds/200/000000/quora.png" />
+  <style>
+    /* User Profile styling start............................................................... */
 
-    <style>
-        /* User Profile styling start............................................................... */
+    .user-info-wrapper {
+      position: relative;
+      width: 100%;
+      margin-bottom: -1px;
+      padding-top: 90px;
+      padding-bottom: 30px;
+      border: 1px solid #e1e7ec;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      overflow: hidden
+    }
 
-.user-info-wrapper {
-    position: relative;
-    width: 100%;
-    margin-bottom: -1px;
-    padding-top: 90px;
-    padding-bottom: 30px;
-    border: 1px solid #e1e7ec;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    overflow: hidden
-}
+    .user-info-wrapper .user-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background-position: center;
+      background-color: #f5f5f5;
+      background-repeat: no-repeat;
+      background-size: cover
+    }
 
-.user-info-wrapper .user-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background-position: center;
-    background-color: #f5f5f5;
-    background-repeat: no-repeat;
-    background-size: cover
-}
+    .user-info-wrapper .user-cover .tooltip .tooltip-inner {
+      width: 230px;
+      max-width: 100%;
+      padding: 10px 15px
+    }
 
-.user-info-wrapper .user-cover .tooltip .tooltip-inner {
-    width: 230px;
-    max-width: 100%;
-    padding: 10px 15px
-}
+    .user-info-wrapper .info-label {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      height: 26px;
+      padding: 0 12px;
+      border-radius: 13px;
+      background-color: #fff;
+      color: #606975;
+      font-size: 12px;
+      line-height: 26px;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.18);
+      cursor: pointer
+    }
 
-.user-info-wrapper .info-label {
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    height: 26px;
-    padding: 0 12px;
-    border-radius: 13px;
-    background-color: #fff;
-    color: #606975;
-    font-size: 12px;
-    line-height: 26px;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.18);
-    cursor: pointer
-}
+    .user-info-wrapper .info-label>i {
+      display: inline-block;
+      margin-right: 3px;
+      font-size: 1.2em;
+      vertical-align: middle
+    }
 
-.user-info-wrapper .info-label>i {
-    display: inline-block;
-    margin-right: 3px;
-    font-size: 1.2em;
-    vertical-align: middle
-}
+    .user-info-wrapper .user-info {
+      display: table;
+      position: relative;
+      width: 100%;
+      padding: 0 18px;
+      z-index: 5
+    }
 
-.user-info-wrapper .user-info {
-    display: table;
-    position: relative;
-    width: 100%;
-    padding: 0 18px;
-    z-index: 5
-}
+    .user-info-wrapper .user-info .user-avatar,
+    .user-info-wrapper .user-info .user-data {
+      display: table-cell;
+      vertical-align: top
+    }
 
-.user-info-wrapper .user-info .user-avatar,
-.user-info-wrapper .user-info .user-data {
-    display: table-cell;
-    vertical-align: top
-}
+    .user-info-wrapper .user-info .user-avatar {
+      position: relative;
+      width: 115px
+    }
 
-.user-info-wrapper .user-info .user-avatar {
-    position: relative;
-    width: 115px
-}
+    .user-info-wrapper .user-info .user-avatar>img {
+      display: block;
+      width: 100%;
+      border: 5px solid #fff;
+      border-radius: 50%
+    }
 
-.user-info-wrapper .user-info .user-avatar>img {
-    display: block;
-    width: 100%;
-    border: 5px solid #fff;
-    border-radius: 50%
-}
+    .user-info-wrapper .user-info .user-avatar .edit-avatar {
+      display: block;
+      position: absolute;
+      top: -2px;
+      right: 2px;
+      width: 36px;
+      height: 36px;
+      transition: opacity .3s;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #606975;
+      line-height: 34px;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      opacity: 0;
+      text-align: center;
+      text-decoration: none
+    }
 
-.user-info-wrapper .user-info .user-avatar .edit-avatar {
-    display: block;
-    position: absolute;
-    top: -2px;
-    right: 2px;
-    width: 36px;
-    height: 36px;
-    transition: opacity .3s;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #606975;
-    line-height: 34px;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    opacity: 0;
-    text-align: center;
-    text-decoration: none
-}
+    .user-info-wrapper .user-info .user-avatar .edit-avatar::before {
+      font-family: feather;
+      font-size: 17px;
+      content: '\e058'
+    }
 
-.user-info-wrapper .user-info .user-avatar .edit-avatar::before {
-    font-family: feather;
-    font-size: 17px;
-    content: '\e058'
-}
+    .user-info-wrapper .user-info .user-avatar:hover .edit-avatar {
+      opacity: 1
+    }
 
-.user-info-wrapper .user-info .user-avatar:hover .edit-avatar {
-    opacity: 1
-}
+    .user-info-wrapper .user-info .user-data {
+      padding-top: 48px;
+      padding-left: 12px
+    }
 
-.user-info-wrapper .user-info .user-data {
-    padding-top: 48px;
-    padding-left: 12px
-}
+    .user-info-wrapper .user-info .user-data h4 {
+      margin-bottom: 2px
+    }
 
-.user-info-wrapper .user-info .user-data h4 {
-    margin-bottom: 2px
-}
+    .user-info-wrapper .user-info .user-data span {
+      display: block;
+      color: #9da9b9;
+      font-size: 13px
+    }
 
-.user-info-wrapper .user-info .user-data span {
-    display: block;
-    color: #9da9b9;
-    font-size: 13px
-}
+    .user-info-wrapper+.list-group .list-group-item:first-child {
+      border-radius: 0
+    }
 
-.user-info-wrapper+.list-group .list-group-item:first-child {
-    border-radius: 0
-}
+    .user-info-wrapper+.list-group .list-group-item:first-child {
+      border-radius: 0;
+    }
 
-.user-info-wrapper+.list-group .list-group-item:first-child {
-    border-radius: 0;
-}
-.list-group-item:first-child {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-.list-group-item:first-child {
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-}
-a.list-group-item {
-    padding-top: .87rem;
-    padding-bottom: .87rem;
-}
-a.list-group-item, .list-group-item-action {
-    transition: all .25s;
-    color: #606975;
-    font-weight: 500;
-}
-.with-badge {
-    position: relative;
-    padding-right: 3.3rem;
-}
-.list-group-item {
-    border-color: #e1e7ec;
-    background-color: #fff;
-    text-decoration: none;
-}
-.list-group-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.125);
-}
+    .list-group-item:first-child {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
 
-.badge.badge-primary {
-    background-color: #0da9ef;
-}
-.with-badge .badge {
-    position: absolute;
-    top: 50%;
-    right: 1.15rem;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.list-group-item i {
-    margin-top: -4px;
-    margin-right: 8px;
-    font-size: 1.1em;
-}
+    .list-group-item:first-child {
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem;
+    }
+
+    a.list-group-item {
+      padding-top: .87rem;
+      padding-bottom: .87rem;
+    }
+
+    a.list-group-item,
+    .list-group-item-action {
+      transition: all .25s;
+      color: #606975;
+      font-weight: 500;
+    }
+
+    .with-badge {
+      position: relative;
+      padding-right: 3.3rem;
+    }
+
+    .list-group-item {
+      border-color: #e1e7ec;
+      background-color: #fff;
+      text-decoration: none;
+    }
+
+    .list-group-item {
+      position: relative;
+      display: block;
+      padding: .75rem 1.25rem;
+      margin-bottom: -1px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .badge.badge-primary {
+      background-color: #0da9ef;
+    }
+
+    .with-badge .badge {
+      position: absolute;
+      top: 50%;
+      right: 1.15rem;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .list-group-item i {
+      margin-top: -4px;
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
 
 
 
-.comment {
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-    padding-left: 66px
-}
-
-.comment .comment-author-ava {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    border-radius: 50%;
-    overflow: hidden
-}
-
-.comment .comment-author-ava>img {
-    display: block;
-    width: 100%
-}
-
-.comment .comment-body {
-    position: relative;
-    padding: 24px;
-    border: 1px solid #e1e7ec;
-    border-radius: 7px;
-    background-color: #fff
-}
-
-.comment .comment-body::after,
-.comment .comment-body::before {
-    position: absolute;
-    top: 12px;
-    right: 100%;
-    width: 0;
-    height: 0;
-    border: solid transparent;
-    content: '';
-    pointer-events: none
-}
-
-.comment .comment-body::after {
-    border-width: 9px;
-    border-color: transparent;
-    border-right-color: #fff
-}
-
-.comment .comment-body::before {
-    margin-top: -1px;
-    border-width: 10px;
-    border-color: transparent;
-    border-right-color: #e1e7ec
-}
-
-.comment .comment-title {
-    margin-bottom: 8px;
-    color: #606975;
-    font-size: 14px;
-    font-weight: 500
-}
-
-.comment .comment-text {
-    margin-bottom: 12px
-}
-
-.comment .comment-footer {
-    display: table;
-    width: 100%
-}
-
-.comment .comment-footer>.column {
-    display: table-cell;
-    vertical-align: middle
-}
-
-.comment .comment-footer>.column:last-child {
-    text-align: right
-}
-
-.comment .comment-meta {
-    color: #9da9b9;
-    font-size: 13px
-}
-
-.comment .reply-link {
-    transition: color .3s;
-    color: #606975;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: .07em;
-    text-transform: uppercase;
-    text-decoration: none
-}
-
-.comment .reply-link>i {
-    display: inline-block;
-    margin-top: -3px;
-    margin-right: 4px;
-    vertical-align: middle
-}
-
-.comment .reply-link:hover {
-    color: #0da9ef
-}
-
-.comment.comment-reply {
-    margin-top: 30px;
-    margin-bottom: 0
-}
-
-@media (max-width: 576px) {
     .comment {
-        padding-left: 0
+      display: block;
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 66px
     }
+
     .comment .comment-author-ava {
-        display: none
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      border-radius: 50%;
+      overflow: hidden
     }
+
+    .comment .comment-author-ava>img {
+      display: block;
+      width: 100%
+    }
+
     .comment .comment-body {
-        padding: 15px
+      position: relative;
+      padding: 24px;
+      border: 1px solid #e1e7ec;
+      border-radius: 7px;
+      background-color: #fff
     }
-    .comment .comment-body::before,
+
+    .comment .comment-body::after,
+    .comment .comment-body::before {
+      position: absolute;
+      top: 12px;
+      right: 100%;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      content: '';
+      pointer-events: none
+    }
+
     .comment .comment-body::after {
-        display: none
+      border-width: 9px;
+      border-color: transparent;
+      border-right-color: #fff
     }
-}
 
-#wastesstt{
-color: transparent;
-}
-.heupal {
-  cursor: pointer;
-  color: #000;
-}
-.heupal:hover {
-  cursor: pointer;
-  color: rgb(10, 8, 8);
-}
+    .comment .comment-body::before {
+      margin-top: -1px;
+      border-width: 10px;
+      border-color: transparent;
+      border-right-color: #e1e7ec
+    }
 
-@media (max-width: 769px){
-  .heupal{
-    display: none;
-  }
-}
-#crtnvhider{
-  display: none;
-}
-@media (max-width: 769px){
-  #crtnvhider{
-    display: block;
-  }
-}
-.heupalrela2{
-  display: none;
-}
-@media (max-width: 769px){
-  .heupalrela2{
-    display: block;
-    font-size: 2em;
-  }
-}
-@media (max-width: 769px){
-  #uselestablebox
-  {
-    display: none;
-  }
-}
-/* user profile end */
-    </style>
-     
-  </head>
+    .comment .comment-title {
+      margin-bottom: 8px;
+      color: #606975;
+      font-size: 14px;
+      font-weight: 500
+    }
+
+    .comment .comment-text {
+      margin-bottom: 12px
+    }
+
+    .comment .comment-footer {
+      display: table;
+      width: 100%
+    }
+
+    .comment .comment-footer>.column {
+      display: table-cell;
+      vertical-align: middle
+    }
+
+    .comment .comment-footer>.column:last-child {
+      text-align: right
+    }
+
+    .comment .comment-meta {
+      color: #9da9b9;
+      font-size: 13px
+    }
+
+    .comment .reply-link {
+      transition: color .3s;
+      color: #606975;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      text-decoration: none
+    }
+
+    .comment .reply-link>i {
+      display: inline-block;
+      margin-top: -3px;
+      margin-right: 4px;
+      vertical-align: middle
+    }
+
+    .comment .reply-link:hover {
+      color: #0da9ef
+    }
+
+    .comment.comment-reply {
+      margin-top: 30px;
+      margin-bottom: 0
+    }
+
+    @media (max-width: 576px) {
+      .comment {
+        padding-left: 0
+      }
+
+      .comment .comment-author-ava {
+        display: none
+      }
+
+      .comment .comment-body {
+        padding: 15px
+      }
+
+      .comment .comment-body::before,
+      .comment .comment-body::after {
+        display: none
+      }
+    }
+
+    #wastesstt {
+      color: transparent;
+    }
+
+    .heupal {
+      cursor: pointer;
+      color: #000;
+    }
+
+    .heupal:hover {
+      cursor: pointer;
+      color: rgb(10, 8, 8);
+    }
+
+    @media (max-width: 769px) {
+      .heupal {
+        display: none;
+      }
+    }
+
+    #crtnvhider {
+      display: none;
+    }
+
+    @media (max-width: 769px) {
+      #crtnvhider {
+        display: block;
+      }
+    }
+
+    .heupalrela2 {
+      display: none;
+    }
+
+    @media (max-width: 769px) {
+      .heupalrela2 {
+        display: block;
+        font-size: 2em;
+      }
+    }
+
+    @media (max-width: 769px) {
+      #uselestablebox {
+        display: none;
+      }
+    }
+
+    /* user profile end */
+  </style>
+
+</head>
 
 
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<div id="message"></div>
+
+  <!-- first section of search bar start................................................................... -->
 
 
-
-<!-- first section of search bar start................................................................... -->
-
-
-<section class="header-main border-bottom " style="background-color: rgb(207, 229, 229);" id="firsthead">
-  <div class="container-fluid">
+  <section class="header-main border-bottom " style="background-color: rgb(207, 229, 229);" id="firsthead">
+    <div class="container-fluid">
       <div class="row  d-flex align-items-center">
-          <div class="col-md-2"> <img class="d-none d-md-flex" src="https://img.icons8.com/clouds/200/000000/quora.png" id="brandico" > </div>
-         
-          <div class="col-md-8">
-              <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Search an..."> <i class="fa fa-search" aria-hidden="true" id="iconse"></i> </div>
+        <div class="col-md-2"> <img class="d-none d-md-flex" src="https://img.icons8.com/clouds/200/000000/quora.png"
+            id="brandico"> </div>
+
+        <div class="col-md-8">
+          <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Search an..."> <i
+              class="fa fa-search" aria-hidden="true" id="iconse"></i> </div>
+        </div>
+        <div class="col-md-2 ml-0">
+          <div class="d-flex d-none d-md-flex flex-row align-items-center" id="ddse">
+            <div class="d-flex flex-column ms-2"><span class="qty">QSearch</span></div>
           </div>
-          <div class="col-md-2 ml-0">
-              <div class="d-flex d-none d-md-flex flex-row align-items-center" id="ddse"> 
-                 <div class="d-flex flex-column ms-2"><span class="qty">QSearch</span></div>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-</section>
-
-
-     
-<!-- first section of search bar end................................................................................ -->
+    </div>
+  </section>
 
 
 
-<!--main navigation bar start.......................................................................................... -->
+  <!-- first section of search bar end................................................................................ -->
+
+
+
+  <!--main navigation bar start.......................................................................................... -->
 
   <div class="site-wrap">
 
@@ -428,10 +451,10 @@ color: transparent;
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-   
-    
+
+
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-      
+
       <div class="container-fluid">
         <div class="d-flex align-items-center">
           <div class="site-logo mr-auto w-25"><a href="index.html" class="qty2">Quest</a></div>
@@ -442,7 +465,7 @@ color: transparent;
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="readblog.html" class="nav-link">Blogs</a></li>
                 <!-- <li><a href="#" class="nav-link">Create</a></li> -->
-                
+
                 <li><a href="index.html#au-section" class="nav-link">About us</a></li>
                 <li><a href="index.html#help-section" class="nav-link">Help</a></li>
                 <!-- <li><a href="#" class="nav-link " id="mbnavvv">Create</a></li> -->
@@ -451,154 +474,53 @@ color: transparent;
           </div>
 
           <div class="ml-auto w-25">
-            <nav class="site-navigation position-relative text-right" >
+            <nav class="site-navigation position-relative text-right">
               <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
                 <!-- <li class="cta"><a href="login.html" class="nav-link"><span>Login</span></a></li> -->
-                <li class="cta"><a href="" class="nav-link" ><i class="fa fa-user-circle" id="accicio"></i></a></li>
+                <li class="cta"><a href="" class="nav-link"><i class="fa fa-user-circle" id="accicio"></i></a></li>
               </ul>
             </nav>
-            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span
+                class="icon-menu h3"></span></a>
           </div>
         </div>
       </div>
-      
+
     </header>
-    
 
 
-<!--Modal for ccreate dropdown-->
-<div class="modal fade text-black" id="exampleModal1" 
-tabindex="-1" role="dialog" 
-aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" 
-                id="exampleModalLabel">
-                Write a Question
-            </h5>
-            <button type="button" class="close" 
-                data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
+
+    <!-- another for create -->
+    <div class="modal fade text-black" id="exampleModal2" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+             Choose Profile Picture</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
             </button>
-        </div>
-        <div class="modal-body">
-          <!-- form tag start -->
-          <form>
-          <div class="form-outline">
-            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-            <!-- <label class="form-label" for="textAreaExample"></label> -->
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class=
-                "btn btn-secondary" data-dismiss="modal" >
-                Submit
+          <div class="modal-body">
+            <!-- form tag start -->
+            <form>
+              
+              <input class="form-control" type="file" id="formFileMultiplePic" multiple />
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="submitPostPic" class="btn btn-secondary" data-dismiss="modal">
+              Submit
             </button>
-            <button type="button" class=
-                "btn btn-secondary" data-dismiss="modal" >
-                Close
-            </button>
-          </form>
-          <!-- form tag end -->
-        </div>
-    </div>
-</div>
-</div>
-<!-- another for create -->
-<div class="modal fade text-black" id="exampleModal2" 
-tabindex="-1" role="dialog" 
-aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" 
-                id="exampleModalLabel">
-                Post</h5>
-            <button type="button" class="close" 
-                data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
-        </div>
-        <div class="modal-body">
-          <!-- form tag start -->
-          <form>
-          <label for="formFileMultiple" class="form-label">Chose multiples pictures or video to upload</label>
-          <input class="form-control" type="file" id="formFileMultiple" multiple />
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class=
-                "btn btn-secondary" data-dismiss="modal" >
-                Submit
-            </button>
-            <button type="button" 
-                class="btn btn-secondary" 
-                data-dismiss="modal">
-                Close
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
             </button>
             </form>
             <!-- form tag end -->
-        </div>
-    </div>
-</div>
-</div>
-
-<!--create modal end -->
-
-
- <!-- Modal for account -->
-  <!-- id is examplemodal when you click on logout button this will open -->
-  <!-- <div class="modal fade text-black" id="exampleModal9o" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9o" aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel9o"><B>USERBOX</B></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" id="crossicon">&times;</span>
-          </button>
-        </div>
-
-
-        <div class="modal-body"> -->
-            <!-- UserPhoto coming from database -->
-            <!-- <a href="#"><img src="userphoto" alt="userphoto" width="40px" height="auto"></a> -->
-
-            <!-- username will come here -->
-            <!-- <h3 id="uname" name="uname">HimanshuSR</h3>
-            <h3 style="margin-bottom: 17px; font-size: 24px;">Groups I am part of: "Value from db"</h3>
-
-            <div class="addac">
-            <h3 id="addanother"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<a href="login.html">Add Another Account</a></h3>
-            </div>
-            <div class="addac">
-                
-                <h3 id="privacytnc"><i class="fa fa-sticky-note-o"></i>&nbsp;<a href="#privacypage"> Privacy and T&C</a></h3>
-             </div>
-             <div class="addac">
-             
-            <h3 id="signout"><button onclick="logfunc()" style="border: none; background: none;"> <i class="fa fa-sign-out"></i>&nbsp;<a href="#logout">SignOut</a></button></h3>
-        </div>
-        </div>
-
-
-
-        <div class="modal-footer"> -->
-          <!-- class="btn btn-secondary" -->
-          <!-- <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
-
-
     </div>
-
-  </div> -->
-
-  <!-- account modal end -->
 
 
 
@@ -607,102 +529,121 @@ aria-hidden="true">
     <!-- #d2ece8 -->
 
 
-  <!-- Main body intro section start.................................................................... -->
+    <!-- Main body intro section start.................................................................... -->
 
     <div class="intro-section" id="home-section">
-     <!-- intro section background div ..........-->
-    <div class="slide-1" style="background-color:rgb(207, 229, 229);" data-stellar-background-ratio="0.5">
-      
-      
-        <div class="container">
-        <div class="row ">
-        <div class="col-12">
-          
-          <div class="row align-content-center" id="sspacee">
-                  
-                  <div class="p-5 mb-4 bg-light rounded-3 w-100" >
+      <!-- intro section background div ..........-->
+      <div class="slide-1" style="background-color:rgb(207, 229, 229);" data-stellar-background-ratio="0.5">
 
-                    <!-- <div class="row">
+
+        <div class="container">
+          <div class="row ">
+            <div class="col-12">
+
+              <div class="row align-content-center" id="sspacee">
+
+                <div class="p-5 mb-4 bg-light rounded-3 w-100">
+
+                  <!-- <div class="row">
                       <div class=" text-center">
                         
                       </div>
                       </div> -->
 
-<!-- profile card on left start....................................... -->
+                  <!-- profile card on left start....................................... -->
 
-                      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-                      <div class="container padding-bottom-3x mb-2">
-                          <div class="row">
-                              <div class="col-lg-4">
-                                  <aside class="user-info-wrapper">
-                                      <div class="user-cover" style="background-image: url(https://bootdey.com/img/Content/bg1.jpg);">
-                                          <div class="info-label" data-toggle="tooltip" title="" data-original-title="Your account"><i class="icon-medal"></i>Your Profile</div>
-                                      </div>
-                                      <div class="user-info">
-                                          <div class="user-avatar">
-                                              <a class="edit-avatar" href="#"></a><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="User"></div>
-                                          <div class="user-data text-black">
-                                              <h4>User Id</h4><span>Joined February 06, 2017</span>
-                                          </div>
-                                      </div>
-                                  </aside>
-                                  <nav class="list-group">
-                                      <a class="list-group-item" href="#"><i class="fa fa-user"></i>User name</a>
-                                      <a class="list-group-item" href="#"><i class="fa fa-map"></i>Address</a>
-                       <!--these three option ask post blog will show on mobile screen  -->
-                                      <a class="list-group-item" href="#"  data-toggle="modal" data-target="#exampleModal1" data-whatever="item 1" id="crtnvhider"><i class="fa fa-question-circle"></i>Ask</a>
-                                      <a class="list-group-item" href="#" data-toggle="modal" data-target="#exampleModal2" data-whatever="item 2" id="crtnvhider"><i class="fa fa-camera"></i>Post</a>
-                                      <a class="list-group-item" href="writeeblog.html" id="crtnvhider"><i class="fa fa-pencil-square"></i>Blog</a>
-                                      <!-- ... -->
-                                      <a class="list-group-item with-badge" href="#"><i class="fa fa-th"></i>Societies joined<span class="badge badge-primary badge-pill">6</span></a>
-                                      <a class="list-group-item with-badge active" href="#"><i class="fa fa-sign-out"></i>Log Out</a>
-                                  </nav>
-                              </div>
-                              <!-- profile card on left end.................... -->
-                              <!-- create nav start.................... -->
-                              <div class="col-lg-8" >
-                                  <div class="padding-top-2x mt-2 hidden-lg-up"></div>
-                                  <div class="table-responsive margin-bottom-2x" id="uselestablebox">
-                                      <table class="table margin-bottom-none text-black">
-                                          <thead>
-                                              <tr>
-                                                <!-- <th id="wastesstt">P</th> -->
-                                                
-                                                  <th class="heupal"><a   data-toggle="modal" data-target="#exampleModal1" data-whatever="item 1">Ask Anything </a><i class="fa fa-question-circle" aria-hidden="true" id="scndnavico"></i></th><th id="wastesstt">Pri</th>
-                                                  <th class="heupal"><a   data-toggle="modal" data-target="#exampleModal2" data-whatever="item 2">Post Anything </a><i class="fa fa-camera" aria-hidden="true" id="scndnavico"></i></th><th id="wastesstt">Pri</th>
-                                                  <th class="heupal"><a href="writeeblog.html" class="heupal">Write a Blog </a><i class="fa fa-pencil-square" aria-hidden="true" id="scndnavico"></i></th>
-                                                  <th id="wastesstt">Priority</th>
-                                                  <!-- <th id="wastesstt">Status</th> -->
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              <!-- <tr>
+                  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                    rel="stylesheet">
+                  <div class="container padding-bottom-3x mb-2">
+                    <div class="row">
+                      <div id="profileBox" class="col-lg-4">
+                        <aside class="user-info-wrapper">
+                          <div class="user-cover"
+                            style="background-image: url(https://bootdey.com/img/Content/bg1.jpg);">
+                            <div class="info-label" data-toggle="tooltip" title="" data-original-title="Your account"><i
+                                class="icon-medal"></i>Your Profile</div>
+                          </div>
+                          <div class="user-info">
+                            <div class="user-avatar">
+                              <a class="edit-avatar" href="#" data-toggle="modal" data-target="#exampleModal2"
+                  data-whatever="item 2"> </a><img
+                                src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="User">
+                            </div>
+                            <div class="user-data text-black">
+                              <h4>User Id</h4><span>Joined February 06, 2017</span>
+                            </div>
+                          </div>
+                        </aside>
+                          
+                         
+                          
+                        <nav class="list-group">
+                          <a class="list-group-item" href="#"><i class="fa fa-user"></i>User name</a>
+                          <a class="list-group-item" href="#"><i class="fa fa-map"></i>Address</a>
+                          <!--these three option ask post blog will show on mobile screen  -->
+                          <a class="list-group-item" href="#" data-toggle="modal" data-target="#exampleModal1"
+                            data-whatever="item 1" id="crtnvhider"><i class="fa fa-question-circle"></i>Ask</a>
+                          <a class="list-group-item" href="#" data-toggle="modal" data-target="#exampleModal2"
+                            data-whatever="item 2" id="crtnvhider"><i class="fa fa-camera"></i>Post</a>
+                          <a class="list-group-item" href="#" id="crtnvhider"><i
+                              class="fa fa-pencil-square"></i>Blog</a>
+                          <!-- ... -->
+                          <a class="list-group-item with-badge" href="#"><i class="fa fa-th"></i>Societies joined<span
+                              class="badge badge-primary badge-pill">6</span></a>
+                          <a class="list-group-item with-badge active" href="#"><i class="fa fa-sign-out"></i>Log
+                            Out</a>
+                        </nav>
+                      </div>
+                      <!-- profile card on left end.................... -->
+                      <!-- create nav start.................... -->
+                      <div class="col-lg-8">
+                        <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                        <div class="table-responsive margin-bottom-2x" id="uselestablebox">
+                          <table class="table margin-bottom-none text-black">
+                            <thead>
+                              <tr>
+                                <!-- <th id="wastesstt">P</th> -->
+
+                                <th class="heupal"><a id="myQuestions">My Questions </a><i class="fa fa-question-circle"
+                                    aria-hidden="true" id="scndnavico"></i></th>
+                                <th id="wastesstt">Pri</th>
+                                <th class="heupal"><a id="myPosts">My Posts </a><i class="fa fa-camera"
+                                    aria-hidden="true" id="scndnavico"></i></th>
+                                <th id="wastesstt">Pri</th>
+                                <th class="heupal"><a id="myBlogs" class="heupal">My Blogs </a><i
+                                    class="fa fa-pencil-square" aria-hidden="true" id="scndnavico"></i></th>
+                                <th id="wastesstt">Priority</th>
+                                <!-- <th id="wastesstt">Status</th> -->
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- <tr>
                                                   <td>08/08/</td>
                                                   <td>08/14/</td>
                                                   <td>Website </td>
                                                   <td><span class="text-warning">High</span></td>
                                                   <td><span class="text-primary">Open</span></td>
                                               </tr> -->
-                                          </tbody>
-                                      </table>
-                                  </div>
-<!-- this will show on mobile screen -->
-                                  <div class="heupalrela2">
-                                      <hr>
-                                      <h2 class="text-black">Your Content</h2>
-                                      <hr>
-                                      </div>
-                                  <!-- create nav end........................................... -->
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- this will show on mobile screen -->
+                        <div class="heupalrela2">
+                          <hr>
+                          <h2 class="text-black">Your Content</h2>
+                          <hr>
+                        </div>
+                        <!-- create nav end........................................... -->
 
 
 
-                                  <!-- Content created by user start................................-->
-                                  <div class="comment">
-                                      <div class="comment-author-ava"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Avatar"></div>
+                        <!-- Content created by user start................................-->
+                        <div id="MainContent">
+                          <!-- <div class="comment-author-ava"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Avatar"></div>
                                       <div class="comment-body">
-                                          <p class="comment-text">At vero eos .</p>
-                                          <!-- user name display optional  -->
-                                          <div class="comment-footer"><span class="comment-meta">Daniel Adams</span></div>
+                                          <p class="comment-text">At vero eos .</p> -->
+                          <!-- user name display optional  -->
+                          <!-- <div class="comment-footer"><span class="comment-meta">Daniel Adams</span></div>
                                       </div>
                                   </div>
                                   <div class="comment">
@@ -717,45 +658,54 @@ aria-hidden="true">
                                     <div class="comment-body">
                                         <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
                                         <div class="comment-footer"><span class="comment-meta">Daniel Adams</span></div>
-                                    </div>
-                                </div>
-                                  
-                                  <!-- content created by user end.......................................... -->
-                                  
-                                  
-                                 
-                              </div>
-                          </div>
+                                    </div> -->
+                        </div>
+
+                        <!-- content created by user end.......................................... -->
+
+
+
                       </div>
-                      </div></div></div></div></div></div></div></div>
-    <!--foooter  -->
-    <div class="container" id="forrtxt">
-<center>
-      <p class="align-content-center">Follow Us on </p>
-</center>
-    </div>
-
-    <div class="container-fluid" id="footbox">
-     
-      <ul class="socialIcons">
-        <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
-        <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
-        <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
-        <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
-       
-      </ul>
-    </div>
-    </div>
-
-        <div class="container   text-center" id="forrtxt">
-          
-            <p >
-         
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This WebPage is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://bpibs.in/" target="_blank" >Bpibs students</a>
-        
-     </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          <!--footer ended  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--foooter  -->
+  <div class="container" id="forrtxt">
+    <center>
+      <p class="align-content-center">Follow Us on </p>
+    </center>
+  </div>
+
+  <div class="container-fluid" id="footbox">
+
+    <ul class="socialIcons">
+      <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+      <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+      <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+      <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+
+    </ul>
+  </div>
+  </div>
+
+  <div class="container   text-center" id="forrtxt">
+
+    <p>
+
+      Copyright &copy;
+      <script>document.write(new Date().getFullYear());</script> All rights reserved | This WebPage is made with <i
+        class="icon-heart" aria-hidden="true"></i> by <a href="https://bpibs.in/" target="_blank">Bpibs students</a>
+
+    </p>
+  </div>
+  <!--footer ended  -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -771,8 +721,23 @@ aria-hidden="true">
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
 
-  
+
   <script src="js/main.js"></script>
-    
-  </body>
+  <script src="js/userProfile.js"></script>
+  <script src="js/profilepic.js"></script>
+  <script>
+    function logfunc() {
+      var logf1 = confirm("Do You Want to Signout!!!");
+      if (logf1 == true) {
+          localStorage.clear();
+          window.location.replace("login2.html");
+        // go on indexpage 
+      } else {
+        // reside on same page
+      }
+    }
+    </script>
+
+</body>
+
 </html> -->

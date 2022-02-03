@@ -1511,3 +1511,23 @@ margin-bottom: -900px;
 .erans{
   color: #243233;
 }
+
+/* class used in userProfile */
+.image--cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center right;
+}
+.textColor{
+  color: #000;
+}
+.textMiddle{
+  display: flex;
+  justify-content:center;
+  margin-top: 150px;
+  font-weight:bolder;
+  color: #000;
+}

@@ -28,7 +28,7 @@ class DbService{
     async getAllData(){
         try{
             const response = await new Promise((resolve,reject)=>{
-                const query = "SELECT * FROM ques where id <= 5;";
+                const query = "SELECT * FROM ques ;";
                 connection.query(query,(err,results)=>{
                     if(err) reject(new Error(err.message));
                     resolve(results);
@@ -45,7 +45,7 @@ class DbService{
     async getAllData2(){
         try{
             const response = await new Promise((resolve,reject)=>{
-                const query = "SELECT * FROM post WHERE id <= 5;";
+                const query = "SELECT * FROM post ;";
                 connection.query(query,(err,results)=>{
                     if(err) reject(new Error(err.message));
                     resolve(results);
@@ -82,7 +82,7 @@ async getAllData3(){
 async getAllBlog(){
     try{
         const response = await new Promise((resolve,reject)=>{
-            const query = "SELECT * FROM blog WHERE id <= 5;";
+            const query = "SELECT * FROM blog ;";
             connection.query(query,(err,results)=>{
                 if(err) reject(new Error(err.message));
                 resolve(results);
@@ -122,7 +122,33 @@ async insertNewName(username , question) {
     }
 }
 
+// insert new user
+async insertNewUser(username, passwords,email,phoneNumber,adddress) {
+    try {
+       
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = "INSERT INTO users(username, passwords,phoneNumber,adddress,email) VALUES (?,?,?,?,?);";
+            
+            connection.query(query, [username, passwords,phoneNumber,adddress,email] , (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            // id : insertId,
+           username : username,
+            password : passwords,
+            phoneNumber: phoneNumber,
+            adddress: adddress,
+            email: email
 
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 // insert blog
 async insertNewBlog(username , blogs) {
@@ -142,6 +168,52 @@ async insertNewBlog(username , blogs) {
             // id : insertId,
            username : username,
             blogs : blogs
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
+// insert image post
+async insertNewPost(username , post) {
+    try {
+       
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = "INSERT INTO post(username, post) VALUES (?,?);";
+            
+            connection.query(query, [username, post] , (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            
+           username : username,
+            post : post
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
+//update profile photo
+async insertUpdate(username , profilePicture) {
+    try {
+       
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = `update users set image = '${profilePicture}' where username='${username}';`;
+            console.log(query);
+            connection.query(query, (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            
+           username : username,
+            profilePicture : profilePicture
         };
     } catch (error) {
         console.log(error);

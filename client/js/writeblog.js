@@ -1,10 +1,12 @@
-console.log('writeblog');
 const addBtn = document.querySelector('#subblog1');
 addBtn.onclick = function (e) {
     e.preventDefault();
     const name1 = localStorage.getItem('user');
     const nameInput = document.querySelector('#inputBlog');
     const blog = nameInput.value;
+    if(blog==''){ 
+        alert1();
+          }else{
     nameInput.value = "";
 
 
@@ -25,4 +27,17 @@ addBtn.onclick = function (e) {
       setTimeout(() => {
           message.innerHTML=``;
       }, 5000);
-}
+}}
+
+
+function alert1() {
+    let message =document.getElementById('message');
+    message.innerHTML=`<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Something went wrong</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`;
+  
+  setTimeout(() => {
+      message.innerHTML=``;
+  }, 5000);
+  }
