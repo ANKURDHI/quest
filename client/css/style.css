@@ -1518,6 +1518,7 @@ margin-bottom: -900px;
   height: 50px;
   border-radius: 50%;
 
+<<<<<<< HEAD
   object-fit: cover;
   object-position: center right;
 }
@@ -1531,3 +1532,21 @@ margin-bottom: -900px;
   font-weight:bolder;
   color: #000;
 }
+=======
+
+
+
+/* like hover styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+
+/* like hover end */
+
+/* admin styling*/
+
+/* admin end */
+>>>>>>> 5a315ab0fe8cb02cc3cec8ad1e6d8310e23e19b2

@@ -174,7 +174,17 @@ app.post('/update', upload.single('image'), function(request, response, next) {
     console.log(post);
     // console.log(request.body);
 });
+// delete 
+app.delete('/delete/:id', (request, response) => {
+    const { id } = request.params;
+    const db = dbSerivce.getDbServiceInstance();
 
+    const result = db.deleteUser(id);
+    
+    result
+    .then(data => response.json({success : data}))
+    .catch(err => console.log(err));
+});
 // create blog
 app.post('/insert2', (request, response) => {
     const { name } = request.body;

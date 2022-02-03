@@ -220,6 +220,26 @@ async insertUpdate(username , profilePicture) {
     }
 }
 
+// Delete user
+async deleteUser(id) {
+    try {
+        id = parseInt(id, 10); 
+        const response = await new Promise((resolve, reject) => {
+            const query = "DELETE FROM users WHERE id = ?";
+
+            connection.query(query, [id] , (err, result) => {
+                if (err) reject(new Error(err.message));
+                resolve(result.affectedRows);
+            })
+        });
+
+        return response === 1 ? true : false;
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+}
+
 }
 
 module.exports = DbService;

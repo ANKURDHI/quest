@@ -484,3 +484,14 @@ sendMail.onclick = function (e) {
 
 
 
+function deleteRowById(id) {
+  fetch('http://localhost:5000/delete/' + id, {
+      method: 'DELETE'
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          location.reload();
+      }
+  });
+}
