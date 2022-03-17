@@ -220,6 +220,30 @@ async insertUpdate(username , profilePicture) {
     }
 }
 
+// update user
+async updateUser(id,name, address,email,phoneNumber,password) {
+    try {
+       
+       
+        const insertId = await new Promise((resolve, reject) => {
+            const query = `update users set username = '${name}',passwords='${password}',adddress='${address}',phoneNumber='${phoneNumber}',email='${email}' where id=${id};`;
+            // console.log(query);
+            connection.query(query, (err, result) => {
+                
+                if (err) reject(new Error(err.message));
+                resolve(result);
+            })
+        });
+        return {
+            
+          success:'true'
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 // Delete user
 async deleteUser(id) {
     try {

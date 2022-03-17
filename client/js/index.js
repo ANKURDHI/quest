@@ -206,7 +206,7 @@ function loadHTMLTable(data) {
         <p>
         <a href="#w" class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</a>&nbsp;
         <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
-        <button id="likebtn${id}" class="like-dislike">
+        <button id="likebtn${id}" class="like-dislike" data-toggle="tooltip" data-placement="top" title="${Math.floor(Math.random() * 160)} Likes">
         <i class="fa fa-thumbs-up"></i>
         
         
@@ -241,7 +241,7 @@ function loadHTMLTable(data) {
         <p>
         <a href="#w" class="reply" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</a>&nbsp;
         <a href="seeans.html" class="reply" id="erans">See all answer</a>&nbsp;
-        <button id="likebtn${id}" class="like-dislike">
+        <button id="likebtn${id}" class="like-dislike" data-toggle="tooltip" data-placement="top" title="${Math.floor(Math.random() * 160)} Likes">
         <i class="fa fa-thumbs-up"></i>
         
         
@@ -284,7 +284,7 @@ function loadHTMLTable1(data) {
     if(post.search("D:")==0){
       post=post.replace("D:\\New folder\\heyil2\\server\\","http://localhost:5000/");
     }
-    if (id <= 16) {
+    if (id <= 5) {
 
       if (image != null) {
         trendHtml +=
@@ -298,7 +298,7 @@ function loadHTMLTable1(data) {
          <h5 class="pull-left"> ${username}</h5>
          <div class="pull-right">
          <a href="#h" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i>
-         Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         ${Math.floor(Math.random() * 60)}Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <a href="#o" class="erans" id="likebtn${id + 100}"><i class="fa fa-thumbs-up" aria-hidden="true"
          id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form"
@@ -315,7 +315,7 @@ function loadHTMLTable1(data) {
          <!-- comment form end -->
          
          </div>
-         <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+         
          <div class="card-body" id="crdpost">
          <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
          <p class="card-text" ><img src="${post}" width="50%"></p>
@@ -335,7 +335,7 @@ function loadHTMLTable1(data) {
           <h5 class="pull-left"> ${username}</h5>
           <div class="pull-right">
           <a href="#h" class="" id="erans"><i class="fa fa-eye" aria-hidden="true" id="scndnavico"></i>
-          Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         ${Math.floor(Math.random() * 60)} Views </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="#o" class="erans" id="likebtn${id + 100}"><i class="fa fa-thumbs-up" aria-hidden="true"
           id="scndnavico"></i> Like</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="#w" class="" id="erans" type="button" data-toggle="replycm-form"
@@ -352,10 +352,10 @@ function loadHTMLTable1(data) {
           <!-- comment form end -->
           
           </div>
-          <img class="card-img-top" src="..." alt="Card image cap" id="crdpost">
+         
           <div class="card-body" id="crdpost">
           <!-- <h5 class="card-title" id="crdpost">Card title</h5> -->
-          <p class="card-text" id="crdpost"><img src="${post}"></p>
+          <p class="card-text" id="crdpost"><img src="${post}" width="50%"></p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
           </div>`
@@ -484,14 +484,3 @@ sendMail.onclick = function (e) {
 
 
 
-function deleteRowById(id) {
-  fetch('http://localhost:5000/delete/' + id, {
-      method: 'DELETE'
-  })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          location.reload();
-      }
-  });
-}

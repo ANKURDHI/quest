@@ -142,7 +142,7 @@ function MyBlogs(data) {
     const name1 = localStorage.getItem('user');
   
     content = "";
-    data.forEach(function ({ id, username, blog, image }) {
+    data.forEach(function ({ id, username, blogs, image }) {
 
         if (name1 == username) {
             if (image != null) {
@@ -154,7 +154,7 @@ function MyBlogs(data) {
   </div>
   <div class="card-body textColor">
     
-     ${blog}
+     ${blogs}
   </div>
 </div> `
             } else {
@@ -166,7 +166,7 @@ function MyBlogs(data) {
   </div>
   <div class="card-body textColor">
     
-     ${blog}
+     ${blogs}
   </div>
 </div> `
             }
@@ -188,12 +188,13 @@ function Profile(data) {
    
     content = "";
     data.forEach(function ({ id, username,image,adddress }) {
-      if(image.search("D:")==0){
-        image=image.replace("D:New folderheyil2server","http://localhost:5000/");
-      }
+      
 
         if (name1 == username) {
             if (image != null) {
+              if(image.search("D:")==0){
+                image=image.replace("D:New folderheyil2server","http://localhost:5000/");
+              }
                 content += `
                 <aside class="user-info-wrapper">
                 <div class="user-cover"
@@ -207,7 +208,7 @@ function Profile(data) {
                       src="${image}" alt="User">
                   </div>
                   <div class="user-data text-black">
-                    <h4>User Id</h4><span>Joined February 06, 2017</span>
+                    <h4>AASS${id}</h4><span>Joined February 06, 2017</span>
                   </div>
                 </div>
               </aside>
@@ -241,7 +242,7 @@ function Profile(data) {
                       src="images/person_1.jpg" alt="User">
                   </div>
                   <div class="user-data text-black">
-                    <h4>User Id</h4><span>Joined February 06, 2017</span>
+                    <h4>AAS${id}</h4><span>Joined February 06, 2017</span>
                   </div>
                 </div>
               </aside>

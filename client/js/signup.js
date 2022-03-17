@@ -10,7 +10,7 @@ addBtn.onclick = function () {
     const phoneNumber = document.getElementById('phoneNumber').value;
     const address = document.getElementById('address').value;
     
-   console.log(password,confPassword);
+//    console.log(password,confPassword);
 if(password==confPassword){
 
     

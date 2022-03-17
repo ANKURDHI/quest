@@ -1,13 +1,14 @@
-const addBtn = document.querySelector('#subblog1');
+const addBtn = document.querySelector('#addNameBtn');
 addBtn.onclick = function (e) {
     e.preventDefault();
     const name1 = localStorage.getItem('user');
-    const nameInput = document.querySelector('#inputBlog');
-    const blog = nameInput.value;
+    const blogInput = document.querySelector('#inputBlog');
+    console.log(blogInput.value);
+    const blog = blogInput.value;
     if(blog==''){ 
         alert1();
           }else{
-    nameInput.value = "";
+    blogInput.value = "";
 
 
     fetch('http://localhost:5000/insert2', {

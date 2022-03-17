@@ -199,6 +199,25 @@ app.post('/insert2', (request, response) => {
         .then(data => response.json({ data: data }))
         .catch(err => console.log(err));
 });
+// update user
+app.post('/updateUser', (request, response) => {
+    const { id } = request.body;
+    const { name } = request.body;
+    const { address } = request.body;
+    const { email } = request.body;
+    const { phoneNumber } = request.body;
+    const { password } = request.body;
+    
+    const db = dbSerivce.getDbServiceInstance();
+    
+    const result = db.updateUser(id,name, address,email,phoneNumber,password);
+    // const result = db.insertNewName(question);
+
+    result
+        .then(data => response.json({ data: data }))
+        .catch(err => console.log(err));
+});
+
 
 app.post('/insertUser', (request, response) => {
     const { username } = request.body;

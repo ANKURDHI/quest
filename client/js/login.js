@@ -17,7 +17,15 @@ function homePage(data){
     
     data.forEach(function({ username, passwords}){
         
-        if(user == username && password == passwords){
+        if(user == 'admin' && password == 'admin'){
+          
+            location.replace("Adminst.html");
+            
+           
+
+
+        }
+        else if(user == username && password == passwords){
             localStorage.setItem('user', user);
             location.replace("index.html");
             
